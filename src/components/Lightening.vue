@@ -43,20 +43,12 @@ onMounted(() => {
   });
 
   document.addEventListener("click", () => {
-    if (
-      lighteningImg.value.getAttribute("data-show") === "true" &&
-      lighteningImg.value.getAttribute("src").includes("lightening.png")
-    ) {
-      lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.gif");
+    lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.gif");
 
-      setTimeout(() => {
-        generateBurnMark(x, y);
-        lighteningImg.value.setAttribute(
-          "src",
-          "src/assets/imgs/lightening.png"
-        );
-      }, 1000);
-    }
+    setTimeout(() => {
+      generateBurnMark(x, y);
+      lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.png");
+    }, 1000);
   });
 });
 </script>
