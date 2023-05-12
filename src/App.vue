@@ -1,14 +1,14 @@
 <script setup>
-import Lightening from "./components/Lightening.vue";
+import Cloud from "./components/Cloud.vue";
 </script>
 
 <template>
   <div class="w-[200px] h-[200px] bg-gray-200 my-[100px] mx-auto">
     click on me
   </div>
-  <Lightening />
+  <Cloud />
   <div
-    data-calm="true"
+    data-cute="true"
     class="w-[200px] h-[200px] bg-gray-400 my-[100px] mx-auto"
   >
     hover on me

@@ -21,7 +21,7 @@ onMounted(() => {
     x = e.clientX;
     y = e.clientY;
 
-    if (e.target.getAttribute("data-calm")) {
+    if (e.target.getAttribute("data-cute")) {
       if (cuteCloudImg.value.getAttribute("data-show") === "false") {
         cuteCloudImg.value.setAttribute("data-show", "true");
         lighteningImg.value.setAttribute("data-show", "false");
@@ -62,23 +62,25 @@ onMounted(() => {
   <img
     data-show="false"
     ref="lighteningImg"
-    class="cloud w-[120px] absolute"
-    style="left: -150px"
+    class="cloud"
     src="/imgs/lightening.png"
-    alt="lightening"
+    alt="cloud"
   />
   <img
     data-show="false"
     ref="cuteCloudImg"
-    class="cloud w-[120px] absolute"
-    style="left: -150px"
+    class="cloud"
     src="/imgs/cuteCloud.gif"
-    alt="lightening"
+    alt="cloud"
   />
 </template>
 
 <style scoped>
 .cloud {
+  width: 120px;
+  position: absolute;
+  left: -150px;
   transition: all 0.1s linear;
+  z-index: 9999;
 }
 </style>
