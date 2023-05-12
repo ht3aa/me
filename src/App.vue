@@ -3,8 +3,16 @@ import Lightening from "./components/Lightening.vue";
 </script>
 
 <template>
+  <div class="w-[200px] h-[200px] bg-gray-200 my-[100px] mx-auto">
+    click on me
+  </div>
   <Lightening />
-  <p class="w-[200px] h-[200px] bg-black">hello mother father</p>
+  <div
+    data-calm="true"
+    class="w-[200px] h-[200px] bg-gray-400 my-[100px] mx-auto"
+  >
+    hover on me
+  </div>
 </template>
 
 <style>

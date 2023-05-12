@@ -1,6 +1,8 @@
 <script setup>
-const lighteningImg = ref(null);
 import { onMounted, ref } from "vue";
+
+const lighteningImg = ref(null);
+const cuteCloudImg = ref(null);
 
 const generateBurnMark = (x, y) => {
   let img = document.createElement("img");
@@ -19,33 +21,68 @@ onMounted(() => {
     x = e.clientX;
     y = e.clientY;
 
-    lighteningImg.value.style.left = x + 17 + "px";
-    lighteningImg.value.style.top = y + -150 + "px";
+    if (e.target.getAttribute("data-calm")) {
+      if (cuteCloudImg.value.getAttribute("data-show") === "false") {
+        cuteCloudImg.value.setAttribute("data-show", "true");
+        lighteningImg.value.setAttribute("data-show", "false");
+        lighteningImg.value.style.left = -150 + "px";
+        lighteningImg.value.style.top = 0 + "px";
+      }
+      cuteCloudImg.value.style.left = x + 17 + "px";
+      cuteCloudImg.value.style.top = y + -150 + "px";
+    } else {
+      if (lighteningImg.value.getAttribute("data-show") === "false") {
+        lighteningImg.value.setAttribute("data-show", "true");
+        cuteCloudImg.value.setAttribute("data-show", "false");
+        cuteCloudImg.value.style.left = -150 + "px";
+        cuteCloudImg.value.style.top = 0 + "px";
+      }
+      lighteningImg.value.style.left = x + 17 + "px";
+      lighteningImg.value.style.top = y + -150 + "px";
+    }
   });
 
   document.addEventListener("click", () => {
-    lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.gif");
+    console.log(lighteningImg.value.getAttribute("src"));
+    if (
+      lighteningImg.value.getAttribute("data-show") === "true" &&
+      lighteningImg.value.getAttribute("src").includes("lightening.png")
+    ) {
+      lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.gif");
 
-    setTimeout(() => {
-      generateBurnMark(x, y);
-      lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.png");
-    }, 1000);
+      setTimeout(() => {
+        generateBurnMark(x, y);
+        lighteningImg.value.setAttribute(
+          "src",
+          "src/assets/imgs/lightening.png"
+        );
+      }, 1000);
+    }
   });
 });
 </script>
 
 <template>
   <img
+    data-show="false"
     ref="lighteningImg"
-    class="lighteningImg w-[120px] h-[120px] absolute"
-    style="left: -100px"
+    class="cloud w-[120px] absolute"
+    style="left: -150px"
     src="@/assets/imgs/lightening.png"
+    alt="lightening"
+  />
+  <img
+    data-show="false"
+    ref="cuteCloudImg"
+    class="cloud w-[120px] absolute"
+    style="left: -150px"
+    src="@/assets/imgs/cuteCloud.gif"
     alt="lightening"
   />
 </template>
 
 <style scoped>
-.lighteningImg {
+.cloud {
   transition: all 0.1s linear;
 }
 </style>
