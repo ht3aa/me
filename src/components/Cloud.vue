@@ -62,7 +62,7 @@ onMounted(() => {
   <img
     data-show="false"
     ref="lighteningImg"
-    class="cloud"
+    class="cloud bounce"
     src="/imgs/lightening.png"
     alt="cloud"
   />
@@ -82,5 +82,18 @@ onMounted(() => {
   left: -150px;
   transition: all 0.1s linear;
   z-index: 9999;
+}
+
+.bounce {
+  animation: bounce 1s linear infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(7px);
+  }
 }
 </style>
