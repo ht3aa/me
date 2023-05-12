@@ -43,7 +43,6 @@ onMounted(() => {
   });
 
   document.addEventListener("click", () => {
-    console.log(lighteningImg.value.getAttribute("src"));
     if (
       lighteningImg.value.getAttribute("data-show") === "true" &&
       lighteningImg.value.getAttribute("src").includes("lightening.png")
