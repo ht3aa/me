@@ -6,7 +6,7 @@ const cuteCloudImg = ref(null);
 
 const generateBurnMark = (x, y) => {
   let img = document.createElement("img");
-  img.setAttribute("src", "src/assets/imgs/burnMark.png");
+  img.setAttribute("src", "/imgs/burnMark.png");
   img.setAttribute(
     "style",
     `left: ${x + 53}px; top:${y + -49}px; position: absolute; width: 20px;`
@@ -43,12 +43,17 @@ onMounted(() => {
   });
 
   document.addEventListener("click", () => {
-    lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.gif");
+    if (
+      lighteningImg.value.getAttribute("data-show") === "true" &&
+      lighteningImg.value.getAttribute("src").includes("lightening.png")
+    ) {
+      lighteningImg.value.setAttribute("src", "imgs/lightening.gif");
 
-    setTimeout(() => {
-      generateBurnMark(x, y);
-      lighteningImg.value.setAttribute("src", "src/assets/imgs/lightening.png");
-    }, 1000);
+      setTimeout(() => {
+        generateBurnMark(x, y);
+        lighteningImg.value.setAttribute("src", "imgs/lightening.png");
+      }, 1000);
+    }
   });
 });
 </script>
@@ -59,7 +64,7 @@ onMounted(() => {
     ref="lighteningImg"
     class="cloud w-[120px] absolute"
     style="left: -150px"
-    src="@/assets/imgs/lightening.png"
+    src="/imgs/lightening.png"
     alt="lightening"
   />
   <img
@@ -67,7 +72,7 @@ onMounted(() => {
     ref="cuteCloudImg"
     class="cloud w-[120px] absolute"
     style="left: -150px"
-    src="@/assets/imgs/cuteCloud.gif"
+    src="/imgs/cuteCloud.gif"
     alt="lightening"
   />
 </template>
