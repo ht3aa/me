@@ -1,18 +1,20 @@
 <script setup>
 import Cloud from "./components/Cloud.vue";
+import MovingCard from "./components/MovingCard.vue";
 </script>
 
 <template>
-  <div class="w-[200px] h-[200px] bg-gray-200 my-[100px] mx-auto">
-    click on me
+  <div class="my-[100px] mx-auto md:w-max">
+    <MovingCard
+      src="/imgs/hassan.png"
+      title="Hassan Tahseen"
+      description="someone who you can trust him with your life"
+      ctaText="Want help?"
+      ctaUrl="https://t.me/ht3aa"
+    />
   </div>
+
   <Cloud />
-  <div
-    data-cute="true"
-    class="w-[200px] h-[200px] bg-gray-400 my-[100px] mx-auto"
-  >
-    hover on me
-  </div>
 </template>
 
 <style>

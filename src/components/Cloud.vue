@@ -20,7 +20,6 @@ onMounted(() => {
   document.addEventListener("mousemove", (e) => {
     x = e.clientX;
     y = e.clientY;
-
     if (e.target.getAttribute("data-cute")) {
       if (cuteCloudImg.value.getAttribute("data-show") === "false") {
         cuteCloudImg.value.setAttribute("data-show", "true");
