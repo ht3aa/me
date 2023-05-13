@@ -1,20 +1,29 @@
 <script setup>
 import Cloud from "./components/Cloud.vue";
 import MovingCard from "./components/MovingCard.vue";
+import RotateCard from "./components/RotateCard.vue";
 </script>
 
 <template>
-  <div class="my-[100px] mx-auto md:w-max">
+  <Cloud />
+  <RotateCard
+    data-cute="true"
+    src="/imgs/hassan.png"
+    title="Hassan Tahseen"
+    description="hello"
+    ctaText="Want help?"
+    ctaUrl="https://t.me/ht3aa"
+  />
+  <div class="w-max mx-auto">
     <MovingCard
+      data-cute="true"
       src="/imgs/hassan.png"
       title="Hassan Tahseen"
-      description="someone who you can trust him with your life"
+      description="hello"
       ctaText="Want help?"
       ctaUrl="https://t.me/ht3aa"
     />
   </div>
-
-  <Cloud />
 </template>
 
 <style>
