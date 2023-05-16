@@ -34,10 +34,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="container" class="md:w-[600px] p-10 w-full">
+  <div ref="container">
     <div
       ref="card"
-      class="move w-full flex md:flex-row flex-col bg-gray-100 shadow-lg"
+      class="move flex md:flex-row flex-col bg-gray-100 shadow-lg"
     >
       <img
         class="md:w-1/3 w-full md:h-auto h-[200px] object-cover object-left-top"

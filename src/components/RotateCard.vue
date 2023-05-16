@@ -1,8 +1,8 @@
 <!-- goal: https://yasio.dev/ -->
-<!-- https://codepen.io/AbubakerSaeed/pen/rNNdvqz -->
+
 <script setup>
 import { onMounted, ref } from "vue";
-
+import VanillaTilt from "vanilla-tilt";
 defineProps({
   src: String,
   title: String,
@@ -14,28 +14,26 @@ defineProps({
 const card = ref(null);
 
 onMounted(() => {
-  let motionSpaceRate = 0.07;
-
+  // docs = https://micku7zu.github.io/vanilla-tilt.js/
+  VanillaTilt.init(card.value, {
+    max: 25,
+    speed: 400,
+    perspective: 1000,
+    transition: true,
+  });
+  let motionSpaceRate = 0.09;
   let cardLeft =
     card.value.getBoundingClientRect().x + card.value.clientWidth / 2;
   let cardTop =
     card.value.getBoundingClientRect().top + card.value.clientHeight / 2;
-
   card.value.addEventListener("mousemove", (e) => {
     let x = (e.clientX - cardLeft) * motionSpaceRate;
     let y = (e.clientY - cardTop) * motionSpaceRate;
-    console.log(x, y);
-    card.value.style.transform = `rotateX(${y * 1.2}deg) rotateY(${
-      x * 1.2
-    }deg)`;
-    card.value.style.boxShadow = `${x * 1.2}px ${
-      y * 1.2
-    }px 5px rgb(120, 120, 120)`;
-  });
 
-  card.value.addEventListener("mouseleave", () => {
-    card.value.style.transform = `rotateX(0deg) rotateY(0deg)`;
-    card.value.style.boxShadow = `2px 2px 5px rgb(120, 120, 120)`;
+    card.value.style.boxShadow = `${x}px ${y}px 5px rgb(180, 180, 180)`;
+  });
+  card.value.addEventListener("mouseleave", (e) => {
+    card.value.style.boxShadow = `2px 2px 5px rgb(180, 180, 180)`;
   });
 });
 </script>
@@ -43,7 +41,7 @@ onMounted(() => {
 <template>
   <div
     ref="card"
-    class="test mx-auto my-20 move w-[550px] flex md:flex-row flex-col bg-gray-100"
+    class="customShadow move flex md:flex-row flex-col bg-gray-100"
   >
     <img
       class="md:w-1/3 w-full md:h-auto h-[200px] object-cover object-left-top"
@@ -68,11 +66,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.test {
-  transform-style: preserve-3d;
-  transform: perspective(200rem);
-  position: relative;
-  transition: all 0.2s linear;
-  box-shadow: 2px 2px 5px rgb(120, 120, 120);
+.customShadow {
+  box-shadow: 2px 2px 5px rgb(180, 180, 180);
 }
 </style>
