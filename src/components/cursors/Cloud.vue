@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
+const container = ref(null);
 const lighteningImg = ref(null);
 const cuteCloudImg = ref(null);
 
@@ -17,7 +18,7 @@ const generateBurnMark = (x, y) => {
 onMounted(() => {
   let x = 0;
   let y = 0;
-  document.addEventListener("mousemove", (e) => {
+  container.value.addEventListener("mousemove", (e) => {
     x = e.clientX;
     y = e.clientY;
     if (e.target.getAttribute("data-cute")) {
@@ -41,7 +42,7 @@ onMounted(() => {
     }
   });
 
-  document.addEventListener("click", () => {
+  container.value.addEventListener("click", () => {
     if (
       lighteningImg.value.getAttribute("data-show") === "true" &&
       lighteningImg.value.getAttribute("src").includes("lightening.png")
@@ -54,24 +55,46 @@ onMounted(() => {
       }, 1000);
     }
   });
+
+  container.value.addEventListener("mouseleave", () => {
+    lighteningImg.value.setAttribute("data-show", "false");
+    lighteningImg.value.style.left = -150 + "px";
+    lighteningImg.value.style.top = 0 + "px";
+    cuteCloudImg.value.setAttribute("data-show", "false");
+    cuteCloudImg.value.style.left = -150 + "px";
+    cuteCloudImg.value.style.top = 0 + "px";
+  });
 });
 </script>
 
 <template>
-  <img
-    data-show="false"
-    ref="lighteningImg"
-    class="cloud bounce"
-    src="/imgs/lightening.png"
-    alt="cloud"
-  />
-  <img
-    data-show="false"
-    ref="cuteCloudImg"
-    class="cloud"
-    src="/imgs/cuteCloud.gif"
-    alt="cloud"
-  />
+  <div>
+    <p class="text-center font-bold">Move and click inside the box</p>
+    <div
+      ref="container"
+      class="w-full h-[200px] flex justify-center items-center border-2 border-black"
+    >
+      <div class="text-center">
+        <img
+          data-show="false"
+          ref="lighteningImg"
+          class="cloud bounce"
+          src="/imgs/lightening.png"
+          alt="cloud"
+        />
+        <img
+          data-show="false"
+          ref="cuteCloudImg"
+          class="cloud"
+          src="/imgs/cuteCloud.gif"
+          alt="cloud"
+        />
+        <button data-cute="true" class="py-1 px-4 bg-blue-600 text-white">
+          hove on me
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>

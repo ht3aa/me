@@ -1,5 +1,7 @@
 <template>
-  <section class="customGrid gap-10 w-[90%] mx-auto my-10">
+  <section
+    class="customGrid gap-10 w-[90%] mx-auto my-10 justify-center items-center"
+  >
     <slot></slot>
   </section>
 </template>

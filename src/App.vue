@@ -1,16 +1,18 @@
 <script setup>
-import Cloud from "./components/Cloud.vue";
-
 import DropDown from "./components/DropDown.vue";
 </script>
 
 <template>
   <nav class="flex justify-end">
     <DropDown
-      title="Components"
+      title="Select Page"
       :items="[
+        { path: '/', text: 'Home' },
         { path: '/cards', text: 'Cards' },
         { path: '/texts', text: 'Texts' },
+        // { path: '/hamburgers', text: 'Hamburgers' },
+        { path: '/navbars', text: 'Navbars' },
+        { path: '/cursors', text: 'Cursors' },
       ]"
     />
   </nav>

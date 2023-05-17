@@ -1,10 +1,10 @@
 <script setup>
 import GridSection from "../components/GridSection.vue";
-import RandomText from "../components/texts/RandomText.vue";
+import MacNav from "../components/navbars/MacNav.vue";
 </script>
 
 <template>
   <GridSection>
-    <RandomText />
+    <MacNav />
   </GridSection>
 </template>
