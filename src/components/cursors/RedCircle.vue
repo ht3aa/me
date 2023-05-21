@@ -1,83 +1,75 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import Container from "../Container.vue";
+import { addClassTo, moveElTo, removeClassFrom } from "./helpers";
 
-const container = ref(null);
-const $dot = ref(null);
-const $dotOutline = ref(null);
-onMounted(() => {
-  const cursor = {
-    delay: 8,
-    startAgain: false, // to stop when cursor stop move and start when cursor move
-    _x: 0,
-    _y: 0,
-    endX: 0,
-    endY: 0,
+const dot = ref(null);
+const outlineCircle = ref(null);
 
-    init: function () {
-      this.setEventLists();
-      this.animation();
-    },
+let endX = 0,
+  endY = 0,
+  delay = 8,
+  startAgain = false, // to stop when cursor stop move and start when cursor move
+  _x = 0,
+  _y = 0;
 
-    setEventLists: function () {
-      container.value.addEventListener("mouseenter", () => {
-        $dot.value.classList.toggle("opc-1");
-        $dotOutline.value.classList.toggle("opc-1");
-      });
-      container.value.addEventListener("mousemove", (e) => {
-        this.endX = e.pageX;
-        this.endY = e.pageY;
-        $dot.value.style.left = this.endX + "px";
-        $dot.value.style.top = this.endY + "px";
-        if (this.startAgain === true) {
-          this.startAgain = false;
-          this.animation();
-        }
-      });
-      container.value.addEventListener("mouseleave", () => {
-        $dot.value.classList.toggle("opc-1");
-        $dotOutline.value.classList.toggle("opc-1");
-      });
-      container.value.addEventListener("mousedown", () => {
-        $dotOutline.value.classList.add("bg-1");
-      });
-      container.value.addEventListener("mouseup", () => {
-        $dotOutline.value.classList.remove("bg-1");
-      });
-    },
+const startEnterState = (cursor, outlineCircle) => {
+  addClassTo(cursor, "opc-1");
+  addClassTo(outlineCircle, "opc-1");
+  animation(outlineCircle);
+};
 
-    animation: function () {
-      this._x += (this.endX - this._x) / this.delay;
-      this._y += (this.endY - this._y) / this.delay;
+const startMoveState = (e, dot, outlineCircle) => {
+  endX = e.pageX;
+  endY = e.pageY;
+  moveElTo(dot, [endX, endY]);
 
-      $dotOutline.value.style.left = this._x + 0 + "px";
-      $dotOutline.value.style.top = this._y + 0 + "px";
+  if (startAgain === true) {
+    startAgain = false;
+    animation(outlineCircle);
+  }
+};
 
-      let id = requestAnimationFrame(this.animation.bind(this));
+const startUpState = (outlineCircle) => {
+  removeClassFrom(outlineCircle, "bg-1");
+};
+const startDownState = (outlineCircle) => {
+  addClassTo(outlineCircle, "bg-1");
+};
 
-      // * it's something better than setInterval()
+const startLeaveState = (dot, outlineCircle) => {
+  removeClassFrom(dot, "opc-1");
+  removeClassFrom(outlineCircle, "opc-1");
+};
 
-      if (Math.round(this._x) === this.endX && this.endX !== 0) {
-        cancelAnimationFrame(id);
-        this.startAgain = true;
-      }
-    },
-  };
+const animation = (el) => {
+  _x += (endX - _x) / delay;
+  _y += (endY - _y) / delay;
 
-  cursor.init();
-});
+  moveElTo(el, [_x, _y]);
+
+  let id = requestAnimationFrame(() => animation(el));
+  // * it's something better than setInterval()
+  if (Math.round(_x) === endX && endX !== 0) {
+    cancelAnimationFrame(id);
+    startAgain = true;
+  }
+};
 </script>
 
 <template>
-  <div>
-    <p class="text-center font-bold">hold click inside the box</p>
-    <div
-      ref="container"
-      class="cursor-none w-full h-[200px] flex justify-center items-center border-2 border-black"
-    >
-      <div ref="$dotOutline" class="dot-outline"></div>
-      <div ref="$dot" class="dot"></div>
-    </div>
-  </div>
+  <Container
+    @mouseenter="startEnterState(dot, outlineCircle)"
+    @mousemove="(e) => startMoveState(e, dot, outlineCircle)"
+    @mouseleave="startLeaveState(dot, outlineCircle)"
+    @mousedown="startDownState(outlineCircle)"
+    @mouseup="startUpState(outlineCircle)"
+    extraContainerClasses="cursor-none"
+    title="Move and Click inside the box"
+  >
+    <div ref="outlineCircle" class="dot-outline"></div>
+    <div ref="dot" class="dot"></div>
+  </Container>
 </template>
 
 <style scoped>

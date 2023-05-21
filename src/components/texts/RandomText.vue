@@ -55,7 +55,8 @@ const generateRandomWords = (words) => {
   let speed = 50;
   let stay = 3000;
   let res = [];
-  let characters = `#$%^&✅❤️👍✌️✍️😀😂😃😄😉😊😍😓😭`;
+  // let characters = #$%^&✅❤️👍✌️✍️😀😂😃😄😉😊😍😓😭;
+  let characters = '!@#$%%^&*()P{}:|""?><';
   let oldState = "";
 
   for (let i = 0; i < words.length; i++) {
@@ -92,13 +93,7 @@ const getLength = (arr) => {
   });
 };
 
-let words = [
-  "hello and welcome",
-  "Developer",
-  "Designer",
-  "Clean code",
-  "Trusted",
-];
+let words = ["Designer", "Developer", "Content"];
 let shuffleIndexes = generateRandomUniqueNumbers(words.length);
 
 let res = generateRandomWords(
