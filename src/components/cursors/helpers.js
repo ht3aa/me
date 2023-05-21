@@ -6,6 +6,30 @@ export const addClassTo = (element, className) => {
   element.classList.add(className);
 };
 
+export const addClassTo2Els = (element1, element2, className) => {
+  element1.classList.add(className);
+  element2.classList.add(className);
+};
+
+export const show = (...elements) => {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.opacity = 1;
+  }
+};
+
+export const hide = (...elements) => {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.opacity = 0;
+  }
+};
+
+export const addStyleTo = (element, styleType, value) => {
+  element.style[styleType] = value;
+};
+export const removeStyleTo = (element, styleType, value) => {
+  element.style[styleType] = value;
+};
+
 /**
  *
  * @param {HTMLElement} element
@@ -22,6 +46,11 @@ export const addAttributeTo = (element, attributeName, attributeValue) => {
  */
 export const removeClassFrom = (element, className) => {
   element.classList.remove(className);
+};
+
+export const removeClassFrom2Els = (element1, element2, className) => {
+  element1.classList.remove(className);
+  element2.classList.remove(className);
 };
 
 /**
