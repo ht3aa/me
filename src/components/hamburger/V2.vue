@@ -1,34 +1,11 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import Container from "../Container.vue";
 
 // * get the container div (div with id ham_2)
 const hamContainer = ref(null);
 
 onMounted(() => {
-  // * get the data from the classes names
-  const data = [];
-
-  data.push(hamContainer.value.getAttribute("data-bars_thickness"));
-  data.push(hamContainer.value.getAttribute("data-speed"));
-  data.push(hamContainer.value.getAttribute("data-middle_bar_color"));
-  data.push(hamContainer.value.getAttribute("data-top_down_bars_color"));
-
-  // * create the hamburger icon bars
-  const mainBar = document.createElement("div");
-
-  // * set the classes of the main bar
-  mainBar.classList.add("mainBar");
-
-  // * set the user data change
-  const root = document.querySelector(":root");
-  root.style.setProperty("--bars-height", `${data[0]}px`);
-  root.style.setProperty("--transition", `all ${data[1]}s ease-in-out`);
-  root.style.setProperty("--mainBar-backgroundColor", `${data[2]}`);
-  root.style.setProperty("--pseudo-backgroundColor", `${data[3]}`);
-
-  // * add elements to the DOM
-  hamContainer.value.appendChild(mainBar);
-
   // * start the animation
   let start = true;
   hamContainer.value.addEventListener("click", () => {
@@ -40,7 +17,7 @@ onMounted(() => {
       setTimeout(() => {
         hamContainer.value.classList.add("backQuckly");
         hamContainer.value.classList.remove("moveAway");
-      }, data[1] * 1000);
+      }, 0.5 * 1000);
       start = false;
     } else {
       hamContainer.value.classList.add("moveAway");
@@ -50,7 +27,7 @@ onMounted(() => {
         hamContainer.value.classList.remove("setRotate");
         hamContainer.value.classList.add("resetPosition");
         hamContainer.value.classList.remove("backDisapear");
-      }, data[1] * 500);
+      }, 0.5 * 500);
       // hamContainer.value.classList.remove('backDisapear');
       start = true;
     }
@@ -58,9 +35,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div
-    class="w-full h-[200px] flex justify-center items-center border-2 border-black"
-  >
+  <Container title="Click on the hamburger icon">
     <div
       ref="hamContainer"
       id="ham_2"
@@ -68,15 +43,12 @@ onMounted(() => {
       data-speed="0.5"
       data-middle_bar_color="#000000"
       data-top_down_bars_color="#000000"
-    ></div>
-  </div>
+    >
+      <div class="mainBar"></div>
+    </div>
+  </Container>
 </template>
 <style scoped>
-:root {
-  --bars-height: 3.4px;
-  --transition: all 0.5s ease-in-out;
-}
-
 #ham_2 {
   width: 26px;
   height: 17px;
@@ -88,22 +60,22 @@ onMounted(() => {
 
 .mainBar {
   width: 100%;
-  height: var(--bars-height);
+  height: 3.7px;
   position: relative;
-  background: var(--mainBar-backgroundColor);
-  transition: var(--transition);
+  background: black;
+  transition: all 0.5s ease-in-out;
 }
 
 .mainBar::before,
 .mainBar::after {
   content: "";
   width: 100%;
-  height: var(--bars-height);
+  height: 3.7px;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: var(--pseudo-backgroundColor);
-  transition: var(--transition);
+  background-color: black;
+  transition: all 0.5s ease-in-out;
 }
 .mainBar::before {
   transform: translateY(-7px);

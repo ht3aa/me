@@ -20,15 +20,20 @@ onMounted(() => {
 
 <template>
   <Container
-    @mouseenter="batmanAnimation.startEnterState()"
-    @mousemove="(e) => batmanAnimation.startMoveState(e)"
-    @mouseleave="batmanAnimation.startLeaveState()"
+    @mouseenter="batmanAnimation.startEnterState(dot, outlineCircle)"
+    @mousemove="(e) => batmanAnimation.startMoveState(e, dot, outlineCircle)"
+    @mouseleave="batmanAnimation.startLeaveState(dot, outlineCircle)"
     @click="batmanAnimation.startClickState()"
     extraContainerClasses="cursor-none"
     title="Click inside the box"
   >
     <div ref="outlineCircle" class="Batman w-[170px]">
-      <img ref="batman" alt="batman" id="batman" />
+      <img
+        src="/imgs/source-cutout.png"
+        ref="batman"
+        alt="batman"
+        id="batman"
+      />
     </div>
     <div ref="dot" class="Batman w-[10px] h-[10px] bg-[#af2c2c]"></div>
   </Container>

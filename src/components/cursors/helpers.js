@@ -64,3 +64,8 @@ export const moveElTo = (element, point, offset = 0) => {
   element.style.left = point[0] + offset + "px";
   element.style.top = point[1] + offset + "px";
 };
+
+export const size = (element, size) => {
+  element.style.width = size[0] + "px";
+  element.style.height = size[1] + "px";
+};

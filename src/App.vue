@@ -10,7 +10,7 @@ import DropDown from "./components/DropDown.vue";
         { path: '/', text: 'Home' },
         { path: '/cards', text: 'Cards' },
         { path: '/texts', text: 'Texts' },
-        // { path: '/hamburgers', text: 'Hamburgers' },
+        { path: '/hamburgers', text: 'Hamburgers' },
         { path: '/navbars', text: 'Navbars' },
         { path: '/cursors', text: 'Cursors' },
       ]"

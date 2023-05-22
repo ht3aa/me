@@ -1,39 +1,12 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import Container from "../Container.vue";
 
 const mainContainer = ref(null);
 const hamContainer = ref(null);
 const hideElement = ref(null);
 
 onMounted(() => {
-  // * get the elements we need
-
-  // * get the data from the classes names
-  const data = [];
-
-  data.push(hamContainer.value.getAttribute("data-bars_thickness"));
-  data.push(hamContainer.value.getAttribute("data-speed"));
-  data.push(hamContainer.value.getAttribute("data-middle_bar_color"));
-  data.push(hamContainer.value.getAttribute("data-top_down_bars_color"));
-  data.push(hideElement.value.getAttribute("data-background_color"));
-
-  // * create the hamburger icon bars
-  const mainBar = document.createElement("div");
-
-  // * set the classes of the main bar
-  mainBar.classList.add("mainBar");
-
-  // * set the user data change
-  const root = document.querySelector(":root");
-  root.style.setProperty("--bars-height", `${data[0]}px`);
-  root.style.setProperty("--transition", `all ${data[1]}s ease-in-out`);
-  root.style.setProperty("--mainBar-backgroundColor", `${data[2]}`);
-  root.style.setProperty("--pseudo-backgroundColor", `${data[3]}`);
-  root.style.setProperty("--hide-backgroundColor", `${data[4]}`);
-
-  // * add elements to the DOM
-  hamContainer.value.appendChild(mainBar);
-
   // * start animation
   let start = true;
   hamContainer.value.addEventListener("click", () => {
@@ -52,9 +25,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div
-    class="w-full h-[200px] flex justify-center items-center border-2 border-black"
-  >
+  <Container title="Click on the hamburger icon">
     <div ref="mainContainer" class="ham_Container">
       <div class="circle"></div>
       <div
@@ -64,10 +35,12 @@ onMounted(() => {
         data-speed="0.5"
         data-middle_bar_color="#000000"
         data-top_down_bars_color="#000000"
-      ></div>
+      >
+        <div class="mainBar"></div>
+      </div>
       <div ref="hideElement" class="hide" data-background_color="#ffffff"></div>
     </div>
-  </div>
+  </Container>
 </template>
 
 <style scoped>
@@ -97,8 +70,8 @@ onMounted(() => {
   z-index: 2;
   width: 55px;
   height: 34px;
-  background: var(--hide-backgroundColor);
-  transition: var(--transition);
+  background: white;
+  transition: all 0.5s ease-in-out;
 }
 
 #ham_4 {
@@ -114,22 +87,22 @@ onMounted(() => {
 
 .mainBar {
   width: 100%;
-  height: var(--bars-height);
+  height: 3.7px;
   position: relative;
-  background: var(--mainBar-backgroundColor);
-  transition: var(--transition);
+  background: black;
+  transition: all 0.5s ease-in-out;
 }
 
 .mainBar::before,
 .mainBar::after {
   content: "";
   width: 100%;
-  height: var(--bars-height);
+  height: 3.7px;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: var(--pseudo-backgroundColor);
-  transition: var(--transition);
+  background-color: black;
+  transition: all 0.5s ease-in-out;
 }
 .mainBar::before {
   transform: translateY(-7px);
