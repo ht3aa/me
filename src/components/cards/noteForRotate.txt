@@ -1,0 +1,30 @@
+
+To map a set of numbers from 400 to 500 to a corresponding set of numbers between 0 and 130, you can use linear scaling. Here's how you can do it:
+
+Calculate the range of the original set of numbers and the desired set of numbers:
+
+Original range: 500 - 400 = 100
+Desired range: 130 - 0 = 130
+Calculate the scaling factor by dividing the desired range by the original range:
+
+Scaling factor: 130 / 100 = 1.3
+For each number in the original set, subtract 400 to shift the range to start from 0, and then multiply it by the scaling factor to obtain the corresponding value in the desired set:
+
+Corresponding value = (Original number - 400) * Scaling factor
+Here's an example to demonstrate the mapping process:
+
+Original set: {400, 401, 402, ..., 499, 500}
+Desired set: {0, 1.3, 2.6, ..., 127.7, 130}
+
+Let's calculate the corresponding values for a few numbers in the original set:
+
+Original number: 420
+Corresponding value = (420 - 400) * 1.3 = 26
+
+Original number: 450
+Corresponding value = (450 - 400) * 1.3 = 65
+
+Original number: 490
+Corresponding value = (490 - 400) * 1.3 = 117
+
+By applying this method to each number in the original set, you can obtain the corresponding set of numbers between 0 and 130.

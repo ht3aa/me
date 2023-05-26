@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+  outline: none;
+  border: none;
+  background-color: #228be6;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.customRounded {
+  border-radius: 30px;
+}
+
+.btnSmallFont {
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #165994;
+}
+
+.shadowBtn {
+  color: #228be6;
+  background-color: #228be63a;
+}
+
+.shadowBtn:hover {
+  color: white;
+  background-color: #228be6;
+}

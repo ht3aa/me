@@ -6,6 +6,10 @@ defineProps({
     type: String,
     default: "",
   },
+  extraParentClasses: {
+    type: String,
+    default: "",
+  },
   title: String,
 });
 
@@ -13,14 +17,11 @@ onMounted(() => {});
 </script>
 
 <template>
-  <div class="border-2 border-black py-2">
-    <p class="text-center font-bold">{{ title }}</p>
-    <div
-      :class="
-        `${extraContainerClasses} ` +
-        'w-full h-[200px] flex justify-center items-center '
-      "
-    >
+  <div
+    :class="`${extraContainerClasses} self-stretch border-2 border-black py-2 `"
+  >
+    <p class="text-center font-bold mb-4">{{ title }}</p>
+    <div :class="`${extraParentClasses}   flex justify-center items-center`">
       <slot></slot>
     </div>
   </div>

@@ -59,7 +59,7 @@ onMounted(() => {
 
 .mainBar {
   width: 100%;
-  height: 3.4px;
+  height: 3.7px;
   position: relative;
   display: flex;
   background-color: black;
@@ -82,7 +82,7 @@ onMounted(() => {
 .mainBar::after {
   content: "";
   width: 100%;
-  height: 3.4px;
+  height: 3.7px;
   left: 0;
   top: 0;
   position: absolute;

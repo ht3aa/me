@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import anime from "animejs/lib/anime.es.js";
+import Container from "../Container.vue";
 
 const text = ref(null);
 
@@ -93,7 +94,7 @@ const getLength = (arr) => {
   });
 };
 
-let words = ["Designer", "Developer", "Content"];
+let words = ["Reality", "Business", "Success"];
 let shuffleIndexes = generateRandomUniqueNumbers(words.length);
 
 let res = generateRandomWords(
@@ -124,11 +125,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="w-full h-[200px] flex justify-center items-center border-2 border-black"
-  >
-    <div>
-      <span ref="text" class="text-5xl"></span>
-    </div>
-  </div>
+  <span ref="text" class="text-[#228be6]"></span>
 </template>

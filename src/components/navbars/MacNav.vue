@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import Container from "../Container.vue";
 
 function customError(msg) {
   return new Error(msg);
@@ -27,6 +28,9 @@ function update_height_width(els, index, y) {
   }
   els[index].style.width = `${y}px`;
   els[index].style.height = `${y}px`;
+  els[index].children[0].style.width = `${y}px`;
+  els[index].children[0].style.height = `${y}px`;
+  // els[index].style.transform = `scale(${y * 0.1})`;
 }
 
 const start = function (e, els, points_x, equation_values) {
@@ -62,9 +66,9 @@ onMounted(() => {
   const children_of_parent_el = parent_el ? parent_el.children : null;
   const children_x_center_Values = get_center_points_x(children_of_parent_el);
   // you can change these values as you want
-  const range = 4;
-  const amplifier = 55;
-  const min_value = 50;
+  const range = 6;
+  const amplifier = 22;
+  const min_value = 40;
   if (parent_el !== null) {
     parent_el.addEventListener("mousemove", function (e) {
       start(e, children_of_parent_el, children_x_center_Values, {
@@ -85,17 +89,38 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <p class="text-center font-bold">move near the dots</p>
-    <div
-      class="w-full h-[200px] flex justify-center items-center border-2 border-black"
-    >
-      <ul ref="parentEl" class="block w-full">
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-  </div>
+  <ul ref="parentEl" class="block w-full py-3">
+    <li>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+    </li>
+    <li>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+        />
+      </svg>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
@@ -108,10 +133,21 @@ ul {
   list-style: none;
 }
 ul li {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: black;
+  border-radius: 10%;
   margin: 0 10px;
+  /* background-color: #228be685; */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li svg {
+  width: 30px;
+  height: 30px;
+}
+
+ul li:hover {
+  cursor: pointer;
 }
 </style>

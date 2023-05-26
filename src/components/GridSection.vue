@@ -1,14 +1,7 @@
 <template>
   <section
-    class="customGrid gap-10 w-[90%] mx-auto my-10 justify-center items-center"
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-col-6 gap-10 w-[90%] mx-auto my-10 justify-center items-center"
   >
     <slot></slot>
   </section>
 </template>
-
-<style scoped>
-.customGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-</style>
