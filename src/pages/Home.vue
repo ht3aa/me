@@ -3,7 +3,7 @@ import RandomText from "../components/texts/RandomText.vue";
 </script>
 
 <template>
-  <section class="flex flex-col lg:flex-row pt-[100px]">
+  <section class="flex flex-col lg:flex-row pt-[100px] w-[95%] mx-auto">
     <div
       class="w-full text-center lg:text-start lg:w-[70%] pt-10 lg:pt-20 order-2 lg:order-1"
     >
@@ -27,6 +27,32 @@ import RandomText from "../components/texts/RandomText.vue";
         class="rounded-full w-[300px]"
         src="/imgs/me.png"
         alt="Hassan Tahseen"
+      />
+    </div>
+  </section>
+
+  <section class="bg-[#228be6] my-24">
+    <div
+      class="flex flex-col lg:flex-row items-center justify-between py-10 w-[90%] mx-auto"
+    >
+      <div
+        class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1"
+      >
+        <h2 class="text-3xl md:text-4xl">About me</h2>
+        <p class="text-base md:text-lg my-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          accusamus ipsa tempore obcaecati perspiciatis ea minima rem
+          consequuntur eligendi dolore. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Veniam accusamus ipsa tempore obcaecati perspiciatis
+          ea minima rem consequuntur eligendi dolore. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit.
+        </p>
+        <button class="bg-white text-[#228be6]">Contact Me</button>
+      </div>
+      <img
+        class="order-1 lg:order-2"
+        src="https://placebear.com/g/00/300"
+        alt="placeholder"
       />
     </div>
   </section>
