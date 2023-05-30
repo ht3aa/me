@@ -65,38 +65,34 @@ onMounted(() => {
 </script>
 
 <template>
-  <Container
-    title="move mouse around the Card"
-    extraContainerClasses="col-span-2"
-    extraParentClasses="w-[60%] mx-auto"
+  <div
+    ref="card"
+    @mousemove="startMoveState"
+    @mouseleave="startLeaveState"
   >
-    <div
-      ref="card"
-      @mousemove="startMoveState"
-      @mouseleave="startLeaveState"
-      class="customShadow move flex md:flex-row flex-col bg-gray-100"
-    >
+    <div class="flex">
       <img
-        class="md:w-1/3 w-full md:h-auto h-[200px] object-cover object-left-top"
-        :src="src"
+        class="md:w-1/3 w-[30%] object-cover object-left-top"
+        src="/imgs/me.png"
         alt=""
-      />
-      <div class="w-10/12 py-3 px-5 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl">{{ title }}</h3>
-          <p class="text-md">{{ description }}</p>
-        </div>
-        <div class="md:mt-0 mt-5">
-          <button
-            data-cute="true"
-            class="mt-auto px-2 py-1 bg-blue-700 text-white cursor-pointer hover:bg-blue-800"
-          >
-            <a data-cute="true" :href="ctaUrl">{{ ctaText }}</a>
-          </button>
-        </div>
+      >
+
+      <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+        <div
+          class="w-[3px] h-[90%] bg-[#228be6] absolute left-1 top-[50%] translate-y-[-50%]"
+        />
+        <h3 class="text-2xl">
+          React
+        </h3>
+        <p class="text-md">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet iure
+          similique ratione, voluptate doloribus, aperiam ad et omnis deleniti
+          consequuntur perspiciatis! Voluptate explicabo quam delectus sapiente
+          quaerat ex suscipit laudantium.
+        </p>
       </div>
     </div>
-  </Container>
+  </div>
 </template>
 
 <style scoped>

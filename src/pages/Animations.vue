@@ -28,15 +28,15 @@ import RotateCard from "../components/cards/RotateCard.vue";
       src="/imgs/hassan.png"
       title="Move near me"
       description="hello"
-      ctaText="Want help?"
-      ctaUrl="https://t.me/ht3aa"
+       cta-text="Want help?"
+      cta-url="https://t.me/ht3aa"
     />
     <RotateCard
       src="/imgs/hassan.png"
       title="Move near me"
       description="hello"
-      ctaText="Want help?"
-      ctaUrl="https://t.me/ht3aa"
+      cta-text="Want help?"
+      cta-url="https://t.me/ht3aa"
     />
   </GridSection>
 </template>

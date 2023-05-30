@@ -10,7 +10,10 @@ defineProps({
     type: String,
     default: "",
   },
-  title: String,
+  title: {
+    type: String,
+    default: "",
+  },
 });
 
 onMounted(() => {});
@@ -20,9 +23,11 @@ onMounted(() => {});
   <div
     :class="`${extraContainerClasses} self-stretch border-2 border-black py-2 `"
   >
-    <p class="text-center font-bold mb-4">{{ title }}</p>
+    <p class="text-center font-bold mb-4">
+      {{ title }}
+    </p>
     <div :class="`${extraParentClasses}   flex justify-center items-center`">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

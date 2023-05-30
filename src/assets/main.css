@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: dubai;
+  src: url("@/assets/fonts/dubai/DubaiW23-Regular.ttf");
+}
+
+body {
+  font-family: dubai;
+}
+
+.bgMainColor {
+  background-color: #228be6;
+}
+
+.bgSecondaryColor {
+  background-color: #228be633;
+}
+
 button {
   outline: none;
   border: none;
@@ -33,4 +50,9 @@ button:hover {
 .shadowBtn:hover {
   color: white;
   background-color: #228be6;
+}
+
+.wrapper {
+  width: 93%;
+  margin: 0 auto;
 }

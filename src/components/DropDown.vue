@@ -2,8 +2,14 @@
 
 <script setup>
 defineProps({
-  title: String,
-  items: Array,
+  title: {
+    type: String,
+    default: "",
+  },
+  items: {
+    type: Array,
+    default: () => [],
+  },
 });
 </script>
 
@@ -12,9 +18,13 @@ defineProps({
     <li class="dropdown dropdown-7">
       {{ title }}
       <ul class="dropdown_menu dropdown_menu--animated dropdown_menu-7">
-        <router-link v-for="item in items" :key="item" :to="item.path"
-          ><li>{{ item.text }}</li></router-link
+        <router-link
+          v-for="item in items"
+          :key="item"
+          :to="item.path"
         >
+          <li>{{ item.text }}</li>
+        </router-link>
       </ul>
     </li>
   </ul>
