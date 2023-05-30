@@ -1,6 +1,7 @@
 <script setup>
 import RandomText from "../components/texts/RandomText.vue";
 import RotateCard from "../components/cards/RotateCard.vue";
+import MovingCard from "../components/cards/MovingCard.vue";
 </script>
 
 <template>
@@ -69,5 +70,9 @@ import RotateCard from "../components/cards/RotateCard.vue";
     <RotateCard />
     <RotateCard />
     <RotateCard />
+  </section>
+
+  <section class="wrapper flex">
+    <MovingCard />
   </section>
 </template>

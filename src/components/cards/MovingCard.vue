@@ -2,13 +2,13 @@
 import { onMounted, ref } from "vue";
 import Container from "../Container.vue";
 
-defineProps({
-  src: String,
-  title: String,
-  description: String,
-  ctaText: String,
-  ctaUrl: String,
-});
+// defineProps({
+//   src: String,
+//   title: String,
+//   description: String,
+//   ctaText: String,
+//   ctaUrl: String,
+// });
 
 const container = ref(null);
 const card = ref(null);
@@ -35,38 +35,43 @@ onMounted(() => {
 </script>
 
 <template>
-  <Container
-    title="move mouse around the Card"
-    extraContainerClasses="col-span-2"
-    extraParentClasses="w-[60%] mx-auto"
+  <div
+    ref="container"
+    class="mx-auto my-32"
   >
-    <div ref="container">
-      <div
-        ref="card"
-        class="move flex md:flex-row flex-col bg-gray-100 shadow-lg"
+    <div
+      ref="card"
+      class="move flex md:flex-row flex-col shadow-lg"
+    >
+      <img
+        class="mx-auto md:mx-0 md:w-1/3 w-[200px] object-cover object-left-top"
+        src="https://placebear.com/g/1000/1200"
+        alt=""
       >
-        <img
-          class="md:w-1/3 w-full md:h-auto h-[200px] object-cover object-left-top"
-          :src="src"
-          alt=""
-        />
-        <div class="w-10/12 py-3 px-5 flex flex-col justify-between">
-          <div>
-            <h3 class="text-2xl">{{ title }}</h3>
-            <p class="text-md">{{ description }}</p>
-          </div>
-          <div class="md:mt-0 mt-5">
-            <button
+      <div
+        class="w-full md:w-10/12 py-3 px-5 flex flex-col justify-between text-center md:text-start"
+      >
+        <div>
+          <h3 class="text-2xl">
+            Hello mother father
+          </h3>
+          <p class="text-md px-7 md:px-0">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+            repellendus nemo, sapiente soluta itaque adipisci repudiandae
+            consequatur hic distinctio possimus!
+          </p>
+        </div>
+        <div class="md:mt-0 mt-5">
+          <button data-cute="true">
+            <a
               data-cute="true"
-              class="mt-auto px-2 py-1 bg-blue-700 text-white cursor-pointer hover:bg-blue-800"
-            >
-              <a data-cute="true" :href="ctaUrl">{{ ctaText }}</a>
-            </button>
-          </div>
+              :href="ctaUrl"
+            >Show more</a>
+          </button>
         </div>
       </div>
     </div>
-  </Container>
+  </div>
 </template>
 
 <style scoped>

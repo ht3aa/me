@@ -72,7 +72,7 @@ onMounted(() => {
   >
     <div class="flex">
       <img
-        class="md:w-1/3 w-[30%] object-cover object-left-top"
+        class="md:w-1/3 w-[30%] object-cover"
         src="/imgs/me.png"
         alt=""
       >

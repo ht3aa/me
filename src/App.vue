@@ -25,6 +25,21 @@ import MacNav from "./components/navbars/MacNav.vue";
       class="absolute right-[-150px] top-[-120px] w-[500px] h-[500px] bgSecondaryColor rounded-full"
     />
   </div>
+
+  <div
+    class="w-full h-[1000px] absolute bottom-[-1200px] left-0 overflow-hidden z-10"
+  >
+    <div
+      class="absolute bottom-[180px] left-[-60px] w-[100px] h-[500px] bgSecondaryColor rotate-[45deg] rounded-[150px]"
+    />
+    <div
+      class="absolute bottom-[120px] left-[90px] w-[100px] h-[600px] bgSecondaryColor rotate-[45deg] rounded-[150px]"
+    />
+    <div
+      class="absolute bottom-[-200px] left-[-20px] w-[100px] h-[700px] bgSecondaryColor rotate-[45deg] rounded-[150px]"
+    />
+  </div>
+
   <div class="relative z-40">
     <router-view />
   </div>
