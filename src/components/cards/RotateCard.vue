@@ -67,6 +67,7 @@ onMounted(() => {
 <template>
   <div
     ref="card"
+    class="customShadow"
     @mousemove="startMoveState"
     @mouseleave="startLeaveState"
   >
