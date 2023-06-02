@@ -57,20 +57,24 @@ import MovingCard from "../components/cards/MovingCard.vue";
           About me
         </h2>
         <p class="text-base md:text-lg my-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-          accusamus ipsa tempore obcaecati perspiciatis ea minima rem
-          consequuntur eligendi dolore. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Veniam accusamus ipsa tempore obcaecati perspiciatis
-          ea minima rem consequuntur eligendi dolore. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.
+          I am Hassan Tahseen, a dedicated college student at the University of
+          Technology in Baghdad.I worked as a Trainer Assistant at AI Dojo,
+          where I assist in training and development, and also utilize my skills
+          as a web developer and trainer. With a solid foundation in Wev
+          development and its applications, I am passionate about making
+          meaningful contributions to the tech industry. I am grateful for the
+          opportunities that have shaped my path and look forward to connecting
+          with like-minded individuals who share my enthusiasm for technology
+          and innovation.
         </p>
-        <button class="bg-white text-[#228be6]">
-          Contact Me
-        </button>
+
+        <a href="mailto:t.d.cc.hassan@gmail.com">
+          <button class="bg-white text-[#228be6]">Contact Me</button>
+        </a>
       </div>
       <img
-        class="order-1 lg:order-2"
-        src="https://placebear.com/g/00/300"
+        class="w-[450px] order-1 lg:order-2"
+        src="/imgs/with_the_boys.JPG"
         alt="placeholder"
       >
     </div>
