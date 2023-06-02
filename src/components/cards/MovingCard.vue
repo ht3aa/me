@@ -43,39 +43,13 @@ onMounted(() => {
       ref="card"
       class="move flex md:flex-row flex-col shadow-lg"
     >
-      <img
-        class="mx-auto md:mx-0 md:w-1/3 w-[200px] object-cover object-left-top"
-        src="https://placebear.com/g/1000/1200"
-        alt=""
-      >
-      <div
-        class="w-full md:w-10/12 py-3 px-5 flex flex-col justify-between text-center md:text-start"
-      >
-        <div>
-          <h3 class="text-2xl">
-            Hello mother father
-          </h3>
-          <p class="text-md px-7 md:px-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-            repellendus nemo, sapiente soluta itaque adipisci repudiandae
-            consequatur hic distinctio possimus!
-          </p>
-        </div>
-        <div class="md:mt-0 mt-5">
-          <button data-cute="true">
-            <a
-              data-cute="true"
-              :href="ctaUrl"
-            >Show more</a>
-          </button>
-        </div>
-      </div>
+      <slot />
     </div>
   </div>
 </template>
 
 <style scoped>
 .move {
-  transition: all 1s linear;
+  transition: all 0.2s linear;
 }
 </style>

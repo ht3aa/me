@@ -11,6 +11,13 @@ body {
   font-family: dubai;
 }
 
+ol {
+  list-style: decimal;
+}
+ul {
+  list-style: circle;
+}
+
 .bgMainColor {
   background-color: #228be6;
 }
