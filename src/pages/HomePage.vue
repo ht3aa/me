@@ -74,7 +74,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
       </div>
       <img
         class="w-[450px] order-1 lg:order-2"
-        src="/imgs/with_the_boys.JPG"
+        src="/imgs/with_the_boys.jpg"
         alt="placeholder"
       >
     </div>
