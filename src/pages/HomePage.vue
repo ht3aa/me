@@ -123,7 +123,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
       >
         <div>
           <h2 class="text-3xl md:text-4xl mt-2 md:mt-0 mb-5 text-center">
-            What I Can do
+            What I Offer
           </h2>
           <ol class="text-md my-2 px-6">
             <li class="font-bold">
