@@ -21,7 +21,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
         Crafting Unique, Captivating Websites Just for You. Trust Hassan Tahseen
         with Your Vision, Trust Him with Your Life!
       </p>
-      <div class="flex justify-between mx-auto lg:mx-0 w-[320px]">
+      <div class="flex justify-between mx-auto lg:mx-0 sm:w-[320px]">
         <a href="mailto:t.d.cc.hassan@gmail.com">
           <button>Contact Me</button>
         </a>
