@@ -67,32 +67,11 @@ onMounted(() => {
 <template>
   <div
     ref="card"
-    class="customShadow"
+    class="customShadow bg-[#ffffff99]"
     @mousemove="startMoveState"
     @mouseleave="startLeaveState"
   >
-    <div class="flex">
-      <img
-        class="md:w-1/3 w-[30%] object-cover"
-        src="/imgs/me.png"
-        alt=""
-      >
-
-      <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
-        <div
-          class="w-[3px] h-[90%] bg-[#228be6] absolute left-1 top-[50%] translate-y-[-50%]"
-        />
-        <h3 class="text-2xl">
-          React
-        </h3>
-        <p class="text-md">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet iure
-          similique ratione, voluptate doloribus, aperiam ad et omnis deleniti
-          consequuntur perspiciatis! Voluptate explicabo quam delectus sapiente
-          quaerat ex suscipit laudantium.
-        </p>
-      </div>
-    </div>
+    <slot />
   </div>
 </template>
 
