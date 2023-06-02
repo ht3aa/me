@@ -5,20 +5,20 @@ import MacNav from "./components/navbars/MacNav.vue";
 
 <template>
   <nav
-    class="wrapper bg-white top-0 left-0 right-0 mt-2 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[9999]"
+    class="wrapper bg-white py-2 top-0 left-0 right-0 mt-2 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[9999]"
   >
     <img
       class="w-[60px]"
       src="/imgs/logo.png"
       alt="Logo"
     >
-    <div class="w-1/2">
+    <!-- <div class="w-1/2">
       <MacNav />
-    </div>
+    </div> -->
 
-    <button class="text-base">
-      Contact Me
-    </button>
+    <a href="mailto:t.d.cc.hassan@gmail.com">
+      <button class="text-base">Contact Me</button>
+    </a>
   </nav>
   <div class="w-full h-[500px] absolute overflow-hidden z-10">
     <div

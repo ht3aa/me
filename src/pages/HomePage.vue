@@ -12,7 +12,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <div
       class="w-full text-center lg:text-start lg:w-[70%] pt-10 lg:pt-20 order-2 lg:order-1"
     >
-      <h1 class="text-3xl lg:text-6xl font-bold">
+      <h1 class="text-4xl lg:text-6xl font-bold">
         Turn your idea to <RandomText />
       </h1>
       <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
@@ -23,7 +23,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
       </p>
       <div class="flex justify-between mx-auto lg:mx-0 sm:w-[320px]">
         <a href="mailto:t.d.cc.hassan@gmail.com">
-          <button>Contact Me</button>
+          <button class="px-3 md:px-[25px]">Contact Me</button>
         </a>
         <a
           href="/pdfs/cv.pdf"
