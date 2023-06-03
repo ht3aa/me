@@ -10,7 +10,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
     class="flex flex-col lg:flex-row pt-[100px] wrapper"
   >
     <div
-      class="w-full text-center lg:text-start lg:w-[70%] pt-10 lg:pt-20 order-2 lg:order-1"
+      class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1"
     >
       <h1 class="text-4xl lg:text-6xl font-bold">
         Turn your idea to <RandomText />
@@ -25,16 +25,13 @@ import MovingCard from "../components/cards/MovingCard.vue";
         <a href="mailto:t.d.cc.hassan@gmail.com">
           <button class="px-3 md:px-[25px]">Contact Me</button>
         </a>
-        <a
-          href="/pdfs/cv.pdf"
-          download
-        >
+        <a href="/pdfs/cv.pdf">
           <button class="shadowBtn">My Experience</button>
         </a>
       </div>
     </div>
 
-    <div class="w-[200px] lg:w-[30%] order-1 mx-auto lg:mx-0 lg:order-2">
+    <div class="w-[200px] lg:w-[30%] order-1 lg:order-2 mx-auto lg:mx-0">
       <img
         class="rounded-full w-[300px]"
         src="/imgs/me.png"
@@ -45,7 +42,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
 
   <section
     id="aboutMe"
-    class="bg-[#228be6] my-24"
+    class="bgMainColor my-24"
   >
     <div
       class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper"
@@ -69,7 +66,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
         </p>
 
         <a href="mailto:t.d.cc.hassan@gmail.com">
-          <button class="bg-white text-[#228be6]">Contact Me</button>
+          <button class="bg-white textMainColor">Contact Me</button>
         </a>
       </div>
       <img
@@ -86,21 +83,139 @@ import MovingCard from "../components/cards/MovingCard.vue";
   >
     <RotateCard>
       <a href="#hero">
-        <div class="flex">
+        <div class="flex h-full">
           <img
-            class="md:w-1/3 w-[30%] object-cover"
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/me.png"
             alt="portfolio"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
-              class="w-[3px] h-[90%] bg-[#228be6] absolute left-1 top-[50%] translate-y-[-50%]"
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
             />
             <h3 class="text-2xl">Portfolio</h3>
             <p class="text-md">
               Contains information about me, big projects that I has done, and
               what I offer to you as a friend first and customer second.
+            </p>
+          </div>
+        </div>
+      </a>
+    </RotateCard>
+    <RotateCard>
+      <a href="https://matlab-bag.vercel.app/">
+        <div class="flex h-full">
+          <img
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
+            src="/imgs/ali_falih.png"
+            alt="portfolio"
+          >
+
+          <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl">Matlab Bag</h3>
+            <p class="text-md">
+              A website that contains files and videos which explain Matlab
+              software easily and simply. Tools that I used: Nuxt.js React
+              framework and Vercel For hosting
+            </p>
+          </div>
+        </div>
+      </a>
+    </RotateCard>
+
+    <RotateCard>
+      <a href="https://excel-bag.vercel.app/  ">
+        <div class="flex h-full">
+          <img
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
+            src="/imgs/mohammed_salman.jpg"
+            alt="portfolio"
+          >
+
+          <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl">Excel Bag</h3>
+            <p class="text-md">
+              A website that contains files and videos which explain Excel
+              software easily and simply. Tools that I used: Nuxt.js React
+              framework and Vercel For hosting
+            </p>
+          </div>
+        </div>
+      </a>
+    </RotateCard>
+    <RotateCard>
+      <a href="https://github.com/ht3aa/english_bag">
+        <div class="flex h-full">
+          <img
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
+            src="/imgs/computer_teqniques_logo.png"
+            alt="portfolio"
+          >
+
+          <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl">English Bag</h3>
+            <p class="text-md">
+              A project that contains files and videos which explain English
+              language easily and simply. features: Downloadable lecture files,
+              voice records. You can read the lecture while listening the voice
+              record or the videos responsive.
+            </p>
+          </div>
+        </div>
+      </a>
+    </RotateCard>
+
+    <RotateCard>
+      <a href="https://github.com/ht3aa/covid19">
+        <div class="flex h-full">
+          <img
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
+            src="/imgs/covid19.png"
+            alt="portfolio"
+          >
+
+          <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl">Covid 19</h3>
+            <p class="text-md">
+              A project that contains a description about covid-19. also it
+              contains the feature of finding the nearest vaccine from you.
+            </p>
+          </div>
+        </div>
+      </a>
+    </RotateCard>
+
+    <RotateCard>
+      <a href="https://github.com/ht3aa/student_reg_system/tree/main">
+        <div class="flex h-full">
+          <img
+            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
+            src="/imgs/crud.png"
+            alt="portfolio"
+          >
+
+          <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl">Students Management System</h3>
+            <p class="text-md">
+              An integrated performance and quality students management system
+              for Imam Al-Kadhim College, Dhi Qar departments. Features: CRUD
+              functionality, Responsibility system, Access system, Simple Design
             </p>
           </div>
         </div>

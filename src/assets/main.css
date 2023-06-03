@@ -7,6 +7,10 @@
   src: url("@/assets/fonts/dubai/DubaiW23-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: dubai;
 }
@@ -20,6 +24,10 @@ ul {
 
 .bgMainColor {
   background-color: #228be6;
+}
+
+.textMainColor {
+  color: #228be6;
 }
 
 .bgSecondaryColor {
