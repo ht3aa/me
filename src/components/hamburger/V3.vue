@@ -34,14 +34,14 @@ onMounted(() => {
 <template>
   <Container title="Click on the hamburger icon">
     <div
-      ref="hamContainer"
       id="ham_3"
+      ref="hamContainer"
       data-bars_thickness="3.7"
       data-speed="0.5"
       data-middle_bar_color="#000000"
       data-top_down_bars_color="#000000"
     >
-      <div class="mainBar"></div>
+      <div class="mainBar" />
     </div>
   </Container>
 </template>

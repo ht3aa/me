@@ -2,7 +2,7 @@
 import GridSection from "../components/GridSection.vue";
 import MacNav from "../components/navbars/MacNav.vue";
 import RandomText from "../components/texts/RandomText.vue";
-import V1 from "../components/hamburger/V1.vue";
+import v1Hamburger from "../components/hamburger/v1Hamburger.vue";
 import V2 from "../components/hamburger/V2.vue";
 import V3 from "../components/hamburger/V3.vue";
 import V4 from "../components/hamburger/V4.vue";
@@ -28,7 +28,7 @@ import RotateCard from "../components/cards/RotateCard.vue";
       src="/imgs/hassan.png"
       title="Move near me"
       description="hello"
-       cta-text="Want help?"
+      cta-text="Want help?"
       cta-url="https://t.me/ht3aa"
     />
     <RotateCard

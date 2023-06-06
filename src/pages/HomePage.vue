@@ -35,7 +35,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
       <img
         class="rounded-full w-[300px]"
         src="/imgs/me.png"
-        alt="Hassan Tahseen"
+        alt="hassan tahseen"
       >
     </div>
   </section>
@@ -109,7 +109,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/ali_falih.png"
-            alt="portfolio"
+            alt="Ali falih"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
@@ -133,7 +133,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/mohammed_salman.jpg"
-            alt="portfolio"
+            alt="mohammed salman"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
@@ -156,7 +156,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/computer_teqniques_logo.png"
-            alt="portfolio"
+            alt="university logo"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
@@ -181,7 +181,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/covid19.png"
-            alt="portfolio"
+            alt="covid 19"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
@@ -204,7 +204,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/crud.png"
-            alt="portfolio"
+            alt="crud design"
           >
 
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
@@ -231,7 +231,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
       <img
         class="mx-auto md:mx-0 md:w-1/3 w-[200px] object-cover"
         src="/imgs/me_with_green_8ames.jpg"
-        alt=""
+        alt="hassan tahseen"
       >
       <div
         class="w-full md:w-10/12 py-3 px-2 md:px-5 flex flex-col justify-between"

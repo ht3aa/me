@@ -1,24 +1,28 @@
 <script setup>
-import DropDown from "./components/DropDown.vue";
 import MacNav from "./components/navbars/MacNav.vue";
+import v1Hamburger from "./components/hamburger/v1Hamburger.vue";
 </script>
 
 <template>
   <nav
-    class="wrapper bg-white py-2 top-0 left-0 right-0 mt-2 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[9999]"
+    class="wrapper bg-white py-2 top-2 left-0 right-0 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[999]"
   >
     <img
       class="w-[60px]"
       src="/imgs/logo.png"
       alt="Logo"
     >
-    <!-- <div class="w-1/2">
+    <div class="w-1/2 hidden md:block">
       <MacNav />
-    </div> -->
+    </div>
 
-    <a href="mailto:t.d.cc.hassan@gmail.com">
+    <a
+      class="hidden md:inline"
+      href="mailto:t.d.cc.hassan@gmail.com"
+    >
       <button class="text-base">Contact Me</button>
     </a>
+    <v1-hamburger />
   </nav>
   <div class="w-full h-[500px] absolute overflow-hidden z-10">
     <div

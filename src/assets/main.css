@@ -30,6 +30,10 @@ ul {
   color: #228be6;
 }
 
+.borderMainColor {
+  border: 2px solid #228be6;
+}
+
 .bgSecondaryColor {
   background-color: #228be633;
 }
@@ -71,4 +75,13 @@ button:hover {
   width: 80%;
   margin: 0 auto;
   max-width: 1300px;
+}
+
+.tooltip {
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.navItem:hover .tooltip {
+  visibility: visible;
 }

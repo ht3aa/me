@@ -3,14 +3,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import VanillaTilt from "vanilla-tilt";
-import Container from "../Container.vue";
-defineProps({
-  src: String,
-  title: String,
-  description: String,
-  ctaText: String,
-  ctaUrl: String,
-});
 
 const card = ref(null);
 

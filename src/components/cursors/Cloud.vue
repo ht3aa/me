@@ -14,6 +14,8 @@ onMounted(() => {
 
 <template>
   <Container
+    extra-container-classes="cursor-none"
+    title="Move and Click inside the box"
     @mouseenter="cloudAnimation.startEnterState(dot, lighteningImg, [17, -150])"
     @mousemove="
       (e) => cloudAnimation.startMoveState(e, dot, lighteningImg, [17, -150])
@@ -21,17 +23,20 @@ onMounted(() => {
     @mouseleave="cloudAnimation.startLeaveState(lighteningImg, dot)"
     @mouseover="(e) => cloudAnimation.startOverState(e)"
     @click="cloudAnimation.startClickState()"
-    extraContainerClasses="cursor-none"
-    title="Move and Click inside the box"
   >
     <img
       ref="lighteningImg"
       class="cloud bounce"
       src="/imgs/lightening.png"
       alt="cloud"
+    >
+    <div
+      ref="dot"
+      class="redCircle w-[10px] h-[10px] bg-yellow-300"
     />
-    <div ref="dot" class="redCircle w-[10px] h-[10px] bg-yellow-300"></div>
-    <button class="py-1 px-4 bg-blue-600 text-white">hove on me</button>
+    <button class="py-1 px-4 bg-blue-600 text-white">
+      hove on me
+    </button>
   </Container>
 </template>
 

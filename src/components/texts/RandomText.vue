@@ -125,5 +125,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <span ref="text" class="text-[#228be6]"></span>
+  <span
+    ref="text"
+    class="text-[#228be6]"
+  />
 </template>
