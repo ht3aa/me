@@ -2,6 +2,7 @@
 import RandomText from "../components/texts/RandomText.vue";
 import RotateCard from "../components/cards/RotateCard.vue";
 import MovingCard from "../components/cards/MovingCard.vue";
+import LazyImg from "../components/LazyImg.vue";
 </script>
 
 <template>
@@ -31,13 +32,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
       </div>
     </div>
 
-    <div class="w-[200px] lg:w-[30%] order-1 lg:order-2 mx-auto lg:mx-0">
-      <img
-        class="rounded-full w-[300px]"
-        src="/imgs/me.png"
-        alt="hassan tahseen"
-      >
-    </div>
+    <LazyImg
+      extra-div-classes="order-1 w-[200px] lg:w-[300px] lg:order-2 mx-auto lg:mx-0"
+      extra-img-classes="rounded-full"
+      extra-blurred-img-classes="rounded-full"
+      blurred-img-src="/imgs/me-small.png"
+      main-img-src="/imgs/me.png"
+      alt="me and the boys"
+    />
   </section>
 
   <section
@@ -69,11 +71,13 @@ import MovingCard from "../components/cards/MovingCard.vue";
           <button class="bg-white textMainColor">Contact Me</button>
         </a>
       </div>
-      <img
-        class="w-[450px] order-1 lg:order-2"
-        src="/imgs/the_boys.jpg"
+      <LazyImg 
+        extra-div-classes="order-1 lg:order-2"
+        extra-img-classes="w-[450px]"
+        blurred-img-src="/imgs/the_boys-small.jpg"
+        main-img-src="/imgs/the_boys.jpg"
         alt="me and the boys"
-      >
+      />
     </div>
   </section>
 
@@ -84,12 +88,19 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="#hero">
         <div class="flex h-full">
-          <img
+          <!-- <img
             class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
             src="/imgs/me.png"
             alt="portfolio"
-          >
-
+          > -->
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/me-small.png"
+            main-img-src="/imgs/me.png"
+            alt="portfolio"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -106,12 +117,15 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="https://matlab-bag.vercel.app/">
         <div class="flex h-full">
-          <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/ali_falih.png"
-            alt="Ali falih"
-          >
 
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/ali_falih-small.png"
+            main-img-src="/imgs/ali_falih.png"
+            alt="Ali Falih"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -130,12 +144,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="https://excel-bag.vercel.app/  ">
         <div class="flex h-full">
-          <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/mohammed_salman.jpg"
-            alt="mohammed salman"
-          >
-
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/mohammed_salman-small.jpg"
+            main-img-src="/imgs/mohammed_salman.jpg"
+            alt="Mohammed Salman"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -153,12 +169,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/english_bag">
         <div class="flex h-full">
-          <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/computer_teqniques_logo.png"
-            alt="university logo"
-          >
-
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/computer_teqniques_logo-small.png"
+            main-img-src="/imgs/computer_teqniques_logo.png"
+            alt="University Logo"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -178,12 +196,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/covid19">
         <div class="flex h-full">
-          <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/covid19.png"
-            alt="covid 19"
-          >
-
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/covid19-small.png"
+            main-img-src="/imgs/covid19.png"
+            alt="Covid 19"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -201,12 +221,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/student_reg_system/tree/main">
         <div class="flex h-full">
-          <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/crud.png"
-            alt="crud design"
-          >
-
+          <LazyImg 
+            extra-div-classes="md:w-1/3 w-[30%]"
+            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            blurred-img-src="/imgs/crud-small.png"
+            main-img-src="/imgs/crud.png"
+            alt="Crud Design"
+          />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div
               class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]"
@@ -228,11 +250,14 @@ import MovingCard from "../components/cards/MovingCard.vue";
     class="wrapper flex"
   >
     <MovingCard>
-      <img
-        class="mx-auto md:mx-0 md:w-1/3 w-[200px] object-cover"
-        src="/imgs/me_with_green_8ames.jpg"
-        alt="hassan tahseen"
-      >
+      <LazyImg 
+        extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
+        extra-img-classes="object-cover h-full"
+        extra-blurred-img-classes="object-cover h-full"
+        blurred-img-src="/imgs/me_with_green_8ames-small.jpg"
+        main-img-src="/imgs/me_with_green_8ames.jpg"
+        alt="Crud Design"
+      />
       <div
         class="w-full md:w-10/12 py-3 px-2 md:px-5 flex flex-col justify-between"
       >

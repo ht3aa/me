@@ -41,7 +41,6 @@ const startAnimation = () => {
 </script>
 
 <template>
-  {{ showMain2 }}
   <div
     ref="hamContainer"
     class="ham_1 flex md:hidden"
