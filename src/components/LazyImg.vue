@@ -1,5 +1,7 @@
 <script setup>
 // done by reading https://blog.webdevsimplified.com/2023-05/lazy-load-images/
+// https://youtu.be/hJ7Rg1821Q0
+
 import { ref } from "vue";
 
 defineProps({
@@ -30,10 +32,9 @@ defineProps({
 });
 
 const showBlurredImg = ref(true);
-const blurredImg = ref(null);
 const loaded = () => {
   showBlurredImg.value = false;
-};
+}
 </script>
 
 <template>
@@ -41,7 +42,6 @@ const loaded = () => {
     <Transition name="fade">
       <div v-if="showBlurredImg">
         <img
-          ref="blurredImg"
           :class="`pulse absolute left-0 top-0 w-full z-[2] ${extraBlurredImgClasses}`"
           :src="blurredImgSrc"
           alt="blurred img"
@@ -61,10 +61,6 @@ const loaded = () => {
 <style scoped>
 .pulse {
   animation: pulse 1.5s infinite;
-}
-
-.loaded {
-  animation: none;
 }
 
 @keyframes pulse {
