@@ -37,7 +37,7 @@ onMounted(() => {
 <template>
   <div
     ref="container"
-    class="mx-auto my-32"
+    class="mx-auto my-28"
   >
     <div
       ref="card"

@@ -3,13 +3,93 @@ import RandomText from "../components/texts/RandomText.vue";
 import RotateCard from "../components/cards/RotateCard.vue";
 import MovingCard from "../components/cards/MovingCard.vue";
 import LazyImg from "../components/LazyImg.vue";
+import BarChart from "../components/charts/BarChart.vue";
+import { ref } from "vue";
+
+// 21
+const customerOpinions = ref({
+  columns1: [
+    {
+      name: "سيف طالب",
+      opinion: "متواضع وشرح مفهوم عاشت ايدك",
+    },
+    { name: "ضحى صباح", opinion: "وردة" },
+    {
+      name: "حسين طلال",
+      opinion:
+        "مدرس ممتاز , شرح بسيط ومفهوم , دائماً يحب ينقل العلم للاخرين , يوصل المعلومة بطريقة بسيطة ومختصرة",
+    },
+    {
+      name: "يسر علي",
+      opinion: "انسان معطاء وطموح ومخلص بالشرح اتمنى له التوفيق",
+    },
+
+    { name: "عبد الكريم وسام", opinion: "جيد" },
+
+    { name: "ليث ابراهيم", opinion: "جيد" },
+  ],
+  columns2: [
+    { name: "محمد صفاء", opinion: "جيد جداً " },
+
+    {
+      name: "أنس اسكندر",
+      opinion:
+        "شخص مثابر ويحاول من تطوير نفسه ويحب مساعدة الآخرين بما يملك من علم..",
+    },
+
+    { name: "فرقان فيصل", opinion: "محاضرة ممتازة" },
+
+    {
+      name: "ايه مؤيد",
+      opinion: "اي صراحه كولش  استفاديت حلو طريقه شرح و نصيحه نتعلم منها",
+    },
+
+    { name: "مرتضى جمال", opinion: "رجل ممتاز" },
+
+    { name: "إسراء رشيد", opinion: "مساند" },
+  ],
+
+  columns3: [
+    { name: "سيف علي", opinion: "جيد" },
+    {
+      name: "نهاية رجا",
+      opinion: "بارك الله فيك وجعلها في ميزان حسناتك يارب العالمين ",
+    },
+
+    { name: "محمد صفاء", opinion: "محب للعلم" },
+
+    { name: "مرتضى جمال", opinion: "شخص خرافي " },
+
+    { name: "حسين منذر", opinion: "يقوم بتبسيط الفكرة بصورة واضحة جداً" },
+
+    { name: "ملاك حسن", opinion: "جيد جداً" },
+
+    { name: "مريم العذراء رافد", opinion: "ممتاز من ناحية الشرح" },
+  ],
+});
+
+console.log(customerOpinions.value.length);
+
+const nOpinionToShow = ref(5);
+const increment = ref(0);
+const showMoreOpinions = () => {
+  increment.value =
+    customerOpinions.value.columns3.length - nOpinionToShow.value;
+
+  if (increment.value >= 5) {
+    increment.value = 5;
+  }
+
+  nOpinionToShow.value += increment.value;
+};
+
+const showLessOpinions = () => {
+  nOpinionToShow.value -= increment.value;
+};
 </script>
 
 <template>
-  <section
-    id="hero"
-    class="flex flex-col lg:flex-row pt-[100px] wrapper"
-  >
+  <section id="hero" class="flex flex-col lg:flex-row pt-[100px] wrapper">
     <div
       class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1"
     >
@@ -42,19 +122,14 @@ import LazyImg from "../components/LazyImg.vue";
     />
   </section>
 
-  <section
-    id="aboutMe"
-    class="bgMainColor my-24"
-  >
+  <section id="aboutMe" class="bgMainColor my-24">
     <div
       class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper"
     >
       <div
         class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1"
       >
-        <h2 class="text-3xl md:text-4xl">
-          About me
-        </h2>
+        <h2 class="text-3xl md:text-4xl">About me</h2>
         <p class="text-base md:text-lg my-5">
           I am Hassan Tahseen, a dedicated college student at the University of
           Technology in Baghdad.I worked as a Trainer Assistant at AI Dojo,
@@ -71,7 +146,7 @@ import LazyImg from "../components/LazyImg.vue";
           <button class="bg-white textMainColor">Contact Me</button>
         </a>
       </div>
-      <LazyImg 
+      <LazyImg
         extra-div-classes="order-1 lg:order-2"
         extra-img-classes="w-[450px]"
         blurred-img-src="/imgs/the_boys-small.jpg"
@@ -93,7 +168,7 @@ import LazyImg from "../components/LazyImg.vue";
             src="/imgs/me.png"
             alt="portfolio"
           > -->
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -117,8 +192,7 @@ import LazyImg from "../components/LazyImg.vue";
     <RotateCard>
       <a href="https://matlab-bag.vercel.app/">
         <div class="flex h-full">
-
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -144,7 +218,7 @@ import LazyImg from "../components/LazyImg.vue";
     <RotateCard>
       <a href="https://excel-bag.vercel.app/  ">
         <div class="flex h-full">
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -169,7 +243,7 @@ import LazyImg from "../components/LazyImg.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/english_bag">
         <div class="flex h-full">
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -196,7 +270,7 @@ import LazyImg from "../components/LazyImg.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/covid19">
         <div class="flex h-full">
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -221,7 +295,7 @@ import LazyImg from "../components/LazyImg.vue";
     <RotateCard>
       <a href="https://github.com/ht3aa/student_reg_system/tree/main">
         <div class="flex h-full">
-          <LazyImg 
+          <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
@@ -245,12 +319,9 @@ import LazyImg from "../components/LazyImg.vue";
     </RotateCard>
   </section>
 
-  <section
-    id="features"
-    class="wrapper flex"
-  >
+  <section id="features" class="wrapper flex">
     <MovingCard>
-      <LazyImg 
+      <LazyImg
         extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
         extra-img-classes="object-cover h-full"
         extra-blurred-img-classes="object-cover h-full"
@@ -266,9 +337,7 @@ import LazyImg from "../components/LazyImg.vue";
             What I Offer
           </h2>
           <ol class="text-md my-2 px-6">
-            <li class="font-bold">
-              Web Developer
-            </li>
+            <li class="font-bold">Website building</li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can create beautiful, responsive websites using Vue.js and
@@ -283,9 +352,7 @@ import LazyImg from "../components/LazyImg.vue";
                 your deadlines.
               </li>
             </ul>
-            <li class="font-bold">
-              Business Consultant
-            </li>
+            <li class="font-bold">Business Consultant</li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can help you to improve your business by providing advice on
@@ -295,9 +362,7 @@ import LazyImg from "../components/LazyImg.vue";
                 I am a trusted advisor who will always put your business first.
               </li>
             </ul>
-            <li class="font-bold">
-              Web Developer Trainer
-            </li>
+            <li class="font-bold">Web Developement Training</li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can teach you how to become a web developer by providing you
@@ -322,5 +387,77 @@ import LazyImg from "../components/LazyImg.vue";
         </div>
       </div>
     </MovingCard>
+  </section>
+  <section id="Charts" class="wrapper flex">
+    <div class="w-full md:w-[70%] mx-auto">
+      <BarChart />
+    </div>
+  </section>
+
+  <section
+    id="Opinions"
+    class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 py-28"
+  >
+    <div>
+      <RotateCard
+        v-for="customer in customerOpinions.columns1.slice(0, nOpinionToShow)"
+        :key="customer.name"
+      >
+        <div class="mb-5 py-3 px-5 direction-rtl relative">
+          <div
+            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+          />
+          <h3 class="text-2xl mb-2">
+            {{ customer.name }}
+          </h3>
+          <p class="text-md">
+            {{ customer.opinion }}
+          </p>
+        </div>
+      </RotateCard>
+    </div>
+    <div>
+      <RotateCard
+        v-for="customer in customerOpinions.columns2.slice(0, nOpinionToShow)"
+        :key="customer.name"
+      >
+        <div class="mb-5 py-3 px-5 direction-rtl relative">
+          <div
+            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+          />
+          <h3 class="text-2xl mb-2">
+            {{ customer.name }}
+          </h3>
+          <p class="text-md">
+            {{ customer.opinion }}
+          </p>
+        </div>
+      </RotateCard>
+    </div>
+    <div>
+      <RotateCard
+        v-for="customer in customerOpinions.columns3.slice(0, nOpinionToShow)"
+        :key="customer.name"
+      >
+        <div class="mb-5 py-3 px-5 direction-rtl relative">
+          <div
+            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+          />
+          <h3 class="text-2xl mb-2">
+            {{ customer.name }}
+          </h3>
+          <p class="text-md">
+            {{ customer.opinion }}
+          </p>
+        </div>
+      </RotateCard>
+    </div>
+    <button
+      v-if="nOpinionToShow !== customerOpinions.columns3.length"
+      @click="showMoreOpinions"
+    >
+      show More
+    </button>
+    <button v-else @click="showLessOpinions">show Less</button>
   </section>
 </template>
