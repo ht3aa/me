@@ -55,9 +55,6 @@ const customerOpinions = ref({
       name: "نهاية رجا",
       opinion: "بارك الله فيك وجعلها في ميزان حسناتك يارب العالمين ",
     },
-
-    { name: "محمد صفاء", opinion: "محب للعلم" },
-
     { name: "مرتضى جمال", opinion: "شخص خرافي " },
 
     { name: "حسين منذر", opinion: "يقوم بتبسيط الفكرة بصورة واضحة جداً" },
@@ -388,70 +385,70 @@ const showLessOpinions = () => {
       </div>
     </MovingCard>
   </section>
-  <section id="Charts" class="wrapper flex">
-    <div class="w-full md:w-[70%] mx-auto">
+
+  <section id="opinions" class="wrapper">
+    <div class="w-full md:w-[70%] mx-auto mb-10">
       <BarChart />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div>
+        <RotateCard
+          v-for="customer in customerOpinions.columns1.slice(0, nOpinionToShow)"
+          :key="customer.name"
+        >
+          <div class="mb-5 py-3 px-5 direction-rtl relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl mb-2">
+              {{ customer.name }}
+            </h3>
+            <p class="text-md">
+              {{ customer.opinion }}
+            </p>
+          </div>
+        </RotateCard>
+      </div>
+      <div>
+        <RotateCard
+          v-for="customer in customerOpinions.columns2.slice(0, nOpinionToShow)"
+          :key="customer.name"
+        >
+          <div class="mb-5 py-3 px-5 direction-rtl relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl mb-2">
+              {{ customer.name }}
+            </h3>
+            <p class="text-md">
+              {{ customer.opinion }}
+            </p>
+          </div>
+        </RotateCard>
+      </div>
+      <div>
+        <RotateCard
+          v-for="customer in customerOpinions.columns3.slice(0, nOpinionToShow)"
+          :key="customer.name"
+        >
+          <div class="mb-5 py-3 px-5 direction-rtl relative">
+            <div
+              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
+            />
+            <h3 class="text-2xl mb-2">
+              {{ customer.name }}
+            </h3>
+            <p class="text-md">
+              {{ customer.opinion }}
+            </p>
+          </div>
+        </RotateCard>
+      </div>
     </div>
   </section>
 
-  <section
-    id="Opinions"
-    class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 py-28"
-  >
-    <div>
-      <RotateCard
-        v-for="customer in customerOpinions.columns1.slice(0, nOpinionToShow)"
-        :key="customer.name"
-      >
-        <div class="mb-5 py-3 px-5 direction-rtl relative">
-          <div
-            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-          />
-          <h3 class="text-2xl mb-2">
-            {{ customer.name }}
-          </h3>
-          <p class="text-md">
-            {{ customer.opinion }}
-          </p>
-        </div>
-      </RotateCard>
-    </div>
-    <div>
-      <RotateCard
-        v-for="customer in customerOpinions.columns2.slice(0, nOpinionToShow)"
-        :key="customer.name"
-      >
-        <div class="mb-5 py-3 px-5 direction-rtl relative">
-          <div
-            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-          />
-          <h3 class="text-2xl mb-2">
-            {{ customer.name }}
-          </h3>
-          <p class="text-md">
-            {{ customer.opinion }}
-          </p>
-        </div>
-      </RotateCard>
-    </div>
-    <div>
-      <RotateCard
-        v-for="customer in customerOpinions.columns3.slice(0, nOpinionToShow)"
-        :key="customer.name"
-      >
-        <div class="mb-5 py-3 px-5 direction-rtl relative">
-          <div
-            class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-          />
-          <h3 class="text-2xl mb-2">
-            {{ customer.name }}
-          </h3>
-          <p class="text-md">
-            {{ customer.opinion }}
-          </p>
-        </div>
-      </RotateCard>
-    </div>
+  <div class="text-center">
     <button
       v-if="nOpinionToShow !== customerOpinions.columns3.length"
       @click="showMoreOpinions"
@@ -459,5 +456,5 @@ const showLessOpinions = () => {
       show More
     </button>
     <button v-else @click="showLessOpinions">show Less</button>
-  </section>
+  </div>
 </template>
