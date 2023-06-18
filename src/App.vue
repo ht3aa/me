@@ -7,19 +7,19 @@ import v1Hamburger from "./components/hamburger/v1Hamburger.vue";
   <nav
     class="wrapper bg-white py-2 top-2 left-0 right-0 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[999]"
   >
-    <img
-      class="w-[60px]"
-      src="/imgs/logo.png"
-      alt="Logo"
-    >
+    <div class="relative navItem">
+      <img class="w-[50px] rounded-full" src="/imgs/logo.png" alt="Logo" />
+      <div
+        class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
+      >
+        &lt;Hassan/Web&gt;
+      </div>
+    </div>
     <div class="w-1/2 hidden md:block">
       <MacNav />
     </div>
 
-    <a
-      class="hidden md:inline"
-      href="mailto:t.d.cc.hassan@gmail.com"
-    >
+    <a class="hidden md:inline" href="mailto:t.d.cc.hassan@gmail.com">
       <button class="text-base">Contact Me</button>
     </a>
     <v1-hamburger />

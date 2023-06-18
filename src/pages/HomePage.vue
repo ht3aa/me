@@ -94,10 +94,10 @@ const showLessOpinions = () => {
         Turn your idea to <RandomText />
       </h1>
       <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
-        Unlocking Digital Magic with Hassan Tahseen: Front End Web Developer
-        Extraordinaire! Harnessing the Power of Vue.js, Tailwind.css, and More.
-        Crafting Unique, Captivating Websites Just for You. Trust Hassan Tahseen
-        with Your Vision, Trust Him with Your Life!
+        Unlocking Digital Magic with Hassan Tahseen: Full-Stack Web Developer
+        Extraordinaire! Harnessing the Power of Vue.js, Tailwind.css and
+        nest.js, and More. Crafting Unique, Captivating Websites Just for You.
+        Trust Hassan Tahseen with Your Vision, Trust Him with Your Life!
       </p>
       <div class="flex justify-between mx-auto lg:mx-0 sm:w-[320px]">
         <a href="mailto:t.d.cc.hassan@gmail.com">
@@ -448,7 +448,7 @@ const showLessOpinions = () => {
     </div>
   </section>
 
-  <div class="text-center">
+  <div class="text-center mb-5">
     <button
       v-if="nOpinionToShow !== customerOpinions.columns3.length"
       @click="showMoreOpinions"
