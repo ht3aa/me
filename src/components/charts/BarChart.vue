@@ -41,7 +41,10 @@ const chartOptions = ref({
 </script>
 
 <template>
-  <Bar :data="chartData" :options="chartOptions" />
+  <Bar
+    :data="chartData"
+    :options="chartOptions"
+  />
 </template>
 
 <style scoped></style>

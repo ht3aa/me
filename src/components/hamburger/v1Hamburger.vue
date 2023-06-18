@@ -53,7 +53,10 @@ const startAnimation = () => {
     class="absolute left-0 top-[70%] w-full bg-white z-[-20] rounded-lg"
   >
     <nav class="py-5">
-      <ul class="list-none" @click="startAnimation()">
+      <ul
+        class="list-none"
+        @click="startAnimation()"
+      >
         <li>
           <a
             class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"

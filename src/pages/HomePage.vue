@@ -86,7 +86,10 @@ const showLessOpinions = () => {
 </script>
 
 <template>
-  <section id="hero" class="flex flex-col lg:flex-row pt-[100px] wrapper">
+  <section
+    id="hero"
+    class="flex flex-col lg:flex-row pt-[100px] wrapper"
+  >
     <div
       class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1"
     >
@@ -119,14 +122,19 @@ const showLessOpinions = () => {
     />
   </section>
 
-  <section id="aboutMe" class="bgMainColor my-24">
+  <section
+    id="aboutMe"
+    class="bgMainColor my-24"
+  >
     <div
       class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper"
     >
       <div
         class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1"
       >
-        <h2 class="text-3xl md:text-4xl">About me</h2>
+        <h2 class="text-3xl md:text-4xl">
+          About me
+        </h2>
         <p class="text-base md:text-lg my-5">
           I am Hassan Tahseen, a dedicated college student at the University of
           Technology in Baghdad.I worked as a Trainer Assistant at AI Dojo,
@@ -316,7 +324,10 @@ const showLessOpinions = () => {
     </RotateCard>
   </section>
 
-  <section id="features" class="wrapper flex">
+  <section
+    id="features"
+    class="wrapper flex"
+  >
     <MovingCard>
       <LazyImg
         extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
@@ -334,7 +345,9 @@ const showLessOpinions = () => {
             What I Offer
           </h2>
           <ol class="text-md my-2 px-6">
-            <li class="font-bold">Website building</li>
+            <li class="font-bold">
+              Website building
+            </li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can create beautiful, responsive websites using Vue.js and
@@ -349,7 +362,9 @@ const showLessOpinions = () => {
                 your deadlines.
               </li>
             </ul>
-            <li class="font-bold">Business Consultant</li>
+            <li class="font-bold">
+              Business Consultant
+            </li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can help you to improve your business by providing advice on
@@ -359,7 +374,9 @@ const showLessOpinions = () => {
                 I am a trusted advisor who will always put your business first.
               </li>
             </ul>
-            <li class="font-bold">Web Developement Training</li>
+            <li class="font-bold">
+              Web Developement Training
+            </li>
             <ul class="pl-5 pr-0 md:px-7 mb-5">
               <li>
                 I can teach you how to become a web developer by providing you
@@ -386,7 +403,10 @@ const showLessOpinions = () => {
     </MovingCard>
   </section>
 
-  <section id="opinions" class="wrapper">
+  <section
+    id="opinions"
+    class="wrapper"
+  >
     <div class="w-full md:w-[70%] mx-auto mb-10">
       <BarChart />
     </div>
@@ -455,6 +475,11 @@ const showLessOpinions = () => {
     >
       show More
     </button>
-    <button v-else @click="showLessOpinions">show Less</button>
+    <button
+      v-else
+      @click="showLessOpinions"
+    >
+      show Less
+    </button>
   </div>
 </template>

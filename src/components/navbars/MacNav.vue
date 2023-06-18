@@ -87,9 +87,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <ul ref="parentEl" class="block w-full py-3">
+  <ul
+    ref="parentEl"
+    class="block w-full py-3"
+  >
     <li>
-      <a class="navItem relative" href="#hero">
+      <a
+        class="navItem relative"
+        href="#hero"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -113,7 +119,10 @@ onMounted(() => {
       </a>
     </li>
     <li>
-      <a class="navItem relative" href="#aboutMe">
+      <a
+        class="navItem relative"
+        href="#aboutMe"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -135,7 +144,10 @@ onMounted(() => {
       </a>
     </li>
     <li>
-      <a class="navItem relative" href="#projects">
+      <a
+        class="navItem relative"
+        href="#projects"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -157,7 +169,10 @@ onMounted(() => {
       </a>
     </li>
     <li>
-      <a class="navItem relative" href="#features">
+      <a
+        class="navItem relative"
+        href="#features"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -181,7 +196,10 @@ onMounted(() => {
       </a>
     </li>
     <li>
-      <a class="navItem relative" href="#opinions">
+      <a
+        class="navItem relative"
+        href="#opinions"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
