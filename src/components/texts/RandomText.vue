@@ -56,19 +56,19 @@ const generateRandomWords = (words) => {
   let speed = 50;
   let stay = 3000;
   let res = [];
-  // let characters = #$%^&✅❤️👍✌️✍️😀😂😃😄😉😊😍😓😭;
+
   let characters = '!@#$%%^&*()P{}:|""?><';
   let oldState = "";
 
   for (let i = 0; i < words.length; i++) {
-    // [1, 5, 3 ,2 ,7 , 3]
+    // [1, 5, 3 ,2 ,7]
     let indexes = generateRandomUniqueNumbers(words[i].length);
     let result = [];
 
     if (!oldState) oldState = words[i];
 
     oldState = equalTheLengths(oldState, words[i], characters);
-
+    console.log(oldState);
     for (let j = 0; j < words[i].length; j++) {
       oldState = wordToSpecialChar(oldState, indexes[j], characters);
       result.push([oldState, speed]);
@@ -101,7 +101,6 @@ let res = generateRandomWords(
   shuffleIndexes.map((el, index) => words[shuffleIndexes[index]])
 );
 
-let lengths = getLength(words);
 let counter = 0;
 function animate() {
   if (counter === res.length) counter = 0;
@@ -125,8 +124,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <span
-    ref="text"
-    class="text-[#228be6]"
-  />
+  <span ref="text" class="text-[#228be6]" />
 </template>

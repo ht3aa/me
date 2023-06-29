@@ -28,3 +28,41 @@ Original number: 490
 Corresponding value = (490 - 400) * 1.3 = 117
 
 By applying this method to each number in the original set, you can obtain the corresponding set of numbers between 0 and 130.
+
+
+
+
+
+// second solution:
+
+
+To normalize the numbers between 200 and 400 to a range of 50 to 100, you can use the Min-Max Normalization technique. Here's how you can do it:
+
+Determine the original range of the data: In this case, the original range is from 200 to 400.
+
+Determine the desired range: The desired range is from 50 to 100.
+
+Apply the Min-Max Normalization formula: Subtract the minimum value (200) from each data point and divide it by the range (400 - 200 = 200). Then, multiply the result by the desired range (100 - 50 = 50) and add the minimum value of the desired range (50). The formula can be expressed as:
+
+normalized_value = ((x - min(x)) / (max(x) - min(x))) * (max_range - min_range) + min_range
+
+where:
+
+x represents each data point
+min(x) is the minimum value of the original range (200)
+max(x) is the maximum value of the original range (400)
+min_range is the minimum value of the desired range (50)
+max_range is the maximum value of the desired range (100)
+Plug in the values and calculate the normalized values for each data point using the formula.
+
+For example, let's normalize the value 300:
+
+normalized_value = ((300 - 200) / (400 - 200)) * (100 - 50) + 50
+= (100 / 200) * 50 + 50
+= 0.5 * 50 + 50
+= 25 + 50
+= 75
+
+So, the value 300 is normalized to 75 in the range of 50 to 100.
+
+Repeat this process for each data point within the original range to obtain the corresponding normalized values within the desired range.

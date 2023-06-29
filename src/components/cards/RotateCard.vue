@@ -6,38 +6,23 @@ import VanillaTilt from "vanilla-tilt";
 
 const card = ref(null);
 
+const desiredRange = 25;
 const startMoveState = (e) => {
-  // console.log(e.clientX);
-  // TODO for the y
+  let minX =
+    card.value.getBoundingClientRect().left + card.value.clientWidth / 2;
+  let maxX = card.value.clientWidth + minX;
 
-  // original Range = end of the card - start of the card
-  // desiredRange = end of the card - 0
-  let originalRangeX =
-    card.value.getBoundingClientRect().left +
-    card.value.clientWidth -
-    card.value.getBoundingClientRect().left;
-  let desiredRangeX = card.value.clientWidth - 0;
-  let factorX = desiredRangeX / originalRangeX;
+  let originalRangeX = maxX - minX;
+  let factorX = desiredRange / originalRangeX;
 
-  let originalRangeY =
-    card.value.getBoundingClientRect().top +
-    card.value.clientHeight -
-    card.value.getBoundingClientRect().top;
+  let minY =
+    card.value.getBoundingClientRect().top + card.value.clientHeight / 2;
+  let maxY = card.value.clientHeight + minY;
+  let originalRangeY = maxY - minY;
+  let factorY = desiredRange / originalRangeY;
 
-  // console.log(card.value.getBoundingClientRect().top);
-  let desiredRangeY = card.value.clientHeight - 0;
-  let factorY = desiredRangeY / originalRangeY;
-
-  card.value.style.boxShadow = `${
-    (e.clientX -
-      (card.value.getBoundingClientRect().left + card.value.clientWidth / 2)) *
-    factorX *
-    0.06
-  }px ${
-    (e.clientY -
-      (card.value.getBoundingClientRect().top + card.value.clientHeight / 2) *
-        factorY) *
-    0.08
+  card.value.style.boxShadow = `${(e.clientX - minX) * factorX}px ${
+    (e.clientY - minY) * factorY
   }px 5px rgb(180, 180, 180)`;
 };
 
