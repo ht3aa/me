@@ -31,7 +31,7 @@ const nextDoaa = () => {
   index++;
 };
 
-const sched = later.parse.recur().every(3).hour();
+const sched = later.parse.recur().every(1).hour();
 later.setInterval(nextDoaa, sched);
 </script>
 
