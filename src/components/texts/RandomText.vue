@@ -68,7 +68,7 @@ const generateRandomWords = (words) => {
     if (!oldState) oldState = words[i];
 
     oldState = equalTheLengths(oldState, words[i], characters);
-    console.log(oldState);
+
     for (let j = 0; j < words[i].length; j++) {
       oldState = wordToSpecialChar(oldState, indexes[j], characters);
       result.push([oldState, speed]);
