@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import * as later from "@breejs/later";
 
 const doaas = [
   "اللهمَّ مالكَ الملكِ تُؤتي الملكَ مَن تشاءُ، وتنزعُ الملكَ ممن تشاءُ، وتُعِزُّ مَن تشاءُ، وتذِلُّ مَن تشاءُ، بيدِك الخيرُ إنك على كلِّ شيءٍ قديرٌ رحمنُ الدنيا والآخرةِ ورحيمُهما، تعطيهما من تشاءُ، وتمنعُ منهما من تشاءُ، ارحمْني رحمةً تُغنيني بها عن رحمةِ مَن سواك.",
@@ -21,8 +20,9 @@ const nextDoaa = () => {
   doaa.value = doaas[Math.floor(Math.random() * doaas.length)];
 };
 
-const sched = later.parse.recur().every(30).minute();
-later.setInterval(nextDoaa, sched);
+setInterval(() => {
+  nextDoaa();
+}, 180000);
 </script>
 
 <template>

@@ -9,7 +9,6 @@
     "lint": "eslint src/**/*.{js,vue} --fix"
   },
   "dependencies": {
-    "@breejs/later": "^4.1.0",
     "animejs": "^3.2.1",
     "chart.js": "^4.3.0",
     "gsap": "^3.11.5",
