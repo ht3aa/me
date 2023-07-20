@@ -15,14 +15,14 @@ const doaas = [
 
   "رَبِّ اشْرَحْ لِي صَدْرِي وَيَسِّرْ لِي أَمْرِي وَاحْلُلْ عُقْدَةً مِّن لِّسَانِي يَفْقَهُوا قَوْلِي",
 ];
-const doaa = ref(doaas[0]);
 const nextDoaa = () => {
-  doaa.value = doaas[Math.floor(Math.random() * doaas.length)];
+  return doaas[Math.floor(Math.random() * doaas.length)];
 };
+const doaa = ref(nextDoaa());
 
 setInterval(() => {
-  nextDoaa();
-}, 180000);
+  doaa.value = nextDoaa();
+}, 60000);
 </script>
 
 <template>
