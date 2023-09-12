@@ -104,7 +104,7 @@ const showLessOpinions = () => {
         <div class="flex h-full">
           <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
-            extra-img-classes="object-cover h-full aspect-[0.6]"
+            extra-img-classes="object-cover h-full"
             extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
             :blurred-img-src="project.blurredImg"
             :main-img-src="project.mainImg"
@@ -120,134 +120,6 @@ const showLessOpinions = () => {
         </div>
       </a>
     </RotateCard>
-    <!-- <RotateCard> -->
-    <!--   <a href="https://matlab-bag.vercel.app/"> -->
-    <!--     <div class="flex h-full"> -->
-    <!--       <LazyImg -->
-    <!--         extra-div-classes="md:w-1/3 w-[30%]" -->
-    <!--         extra-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         extra-blurred-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         blurred-img-src="/imgs/ali_falih-small.png" -->
-    <!--         main-img-src="/imgs/ali_falih.png" -->
-    <!--         alt="Ali Falih" -->
-    <!--       /> -->
-    <!--       <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative"> -->
-    <!--         <div -->
-    <!--           class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" -->
-    <!--         /> -->
-    <!--         <h3 class="text-2xl">Matlab Bag</h3> -->
-    <!--         <p class="text-md"> -->
-    <!--           A website that contains files and videos which explain Matlab -->
-    <!--           software easily and simply. Tools that I used: Nuxt.js React -->
-    <!--           framework and Vercel For hosting -->
-    <!--         </p> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </a> -->
-    <!-- </RotateCard> -->
-
-    <!-- <RotateCard> -->
-    <!--   <a href="https://excel-bag.vercel.app/"> -->
-    <!--     <div class="flex h-full"> -->
-    <!--       <LazyImg -->
-    <!--         extra-div-classes="md:w-1/3 w-[30%]" -->
-    <!--         extra-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         extra-blurred-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         blurred-img-src="/imgs/mohammed_salman-small.jpg" -->
-    <!--         main-img-src="/imgs/mohammed_salman.jpg" -->
-    <!--         alt="Mohammed Salman" -->
-    <!--       /> -->
-    <!--       <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative"> -->
-    <!--         <div -->
-    <!--           class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" -->
-    <!--         /> -->
-    <!--         <h3 class="text-2xl">Excel Bag</h3> -->
-    <!--         <p class="text-md"> -->
-    <!--           A website that contains files and videos which explain Excel -->
-    <!--           software easily and simply. Tools that I used: Nuxt.js React -->
-    <!--           framework and Vercel For hosting -->
-    <!--         </p> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </a> -->
-    <!-- </RotateCard> -->
-    <!-- <RotateCard> -->
-    <!--   <a href="https://github.com/ht3aa/english_bag"> -->
-    <!--     <div class="flex h-full"> -->
-    <!--       <LazyImg -->
-    <!--         extra-div-classes="md:w-1/3 w-[30%]" -->
-    <!--         extra-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         extra-blurred-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         blurred-img-src="/imgs/computer_teqniques_logo-small.png" -->
-    <!--         main-img-src="/imgs/computer_teqniques_logo.png" -->
-    <!--         alt="University Logo" -->
-    <!--       /> -->
-    <!--       <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative"> -->
-    <!--         <div -->
-    <!--           class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" -->
-    <!--         /> -->
-    <!--         <h3 class="text-2xl">English Bag</h3> -->
-    <!--         <p class="text-md"> -->
-    <!--           A project that contains files and videos which explain English -->
-    <!--           language easily and simply. features: Downloadable lecture files, -->
-    <!--           voice records. You can read the lecture while listening the voice -->
-    <!--           record or the videos responsive. -->
-    <!--         </p> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </a> -->
-    <!-- </RotateCard> -->
-
-    <!-- <RotateCard> -->
-    <!--   <a href="https://github.com/ht3aa/covid19"> -->
-    <!--     <div class="flex h-full"> -->
-    <!--       <LazyImg -->
-    <!--         extra-div-classes="md:w-1/3 w-[30%]" -->
-    <!--         extra-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         extra-blurred-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         blurred-img-src="/imgs/covid19-small.png" -->
-    <!--         main-img-src="/imgs/covid19.png" -->
-    <!--         alt="Covid 19" -->
-    <!--       /> -->
-    <!--       <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative"> -->
-    <!--         <div -->
-    <!--           class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" -->
-    <!--         /> -->
-    <!--         <h3 class="text-2xl">Covid 19</h3> -->
-    <!--         <p class="text-md"> -->
-    <!--           A project that contains a description about covid-19. also it -->
-    <!--           contains the feature of finding the nearest vaccine from you. -->
-    <!--         </p> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </a> -->
-    <!-- </RotateCard> -->
-
-    <!-- <RotateCard> -->
-    <!--   <a href="https://github.com/ht3aa/student_reg_system/tree/main"> -->
-    <!--     <div class="flex h-full"> -->
-    <!--       <LazyImg -->
-    <!--         extra-div-classes="md:w-1/3 w-[30%]" -->
-    <!--         extra-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         extra-blurred-img-classes="object-cover h-full aspect-[0.6]" -->
-    <!--         blurred-img-src="/imgs/crud-small.png" -->
-    <!--         main-img-src="/imgs/crud.png" -->
-    <!--         alt="Crud Design" -->
-    <!--       /> -->
-    <!--       <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative"> -->
-    <!--         <div -->
-    <!--           class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" -->
-    <!--         /> -->
-    <!--         <h3 class="text-2xl">Students Management System</h3> -->
-    <!--         <p class="text-md"> -->
-    <!--           An integrated performance and quality students management system -->
-    <!--           for Imam Al-Kadhim College, Dhi Qar departments. Features: CRUD -->
-    <!--           functionality, Responsibility system, Access system, Simple Design -->
-    <!--         </p> -->
-    <!--       </div> -->
-    <!--     </div> -->
-    <!--   </a> -->
-    <!-- </RotateCard> -->
   </section>
 
   <section id="features" class="wrapper flex">
