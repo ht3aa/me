@@ -38,25 +38,15 @@ const startAnimation = () => {
 </script>
 
 <template>
-  <div
-    ref="hamContainer"
-    class="ham_1 flex md:hidden"
-    @click="startAnimation()"
-  >
+  <div ref="hamContainer" class="ham_1 flex md:hidden" @click="startAnimation()">
     <div class="mainBar">
       <div class="mainBar_firstHalf" />
       <div class="mainBar_secondHalf" />
     </div>
   </div>
-  <div
-    v-if="showMiniNav"
-    class="absolute left-0 top-[70%] w-full bg-white z-[-20] rounded-lg"
-  >
+  <div v-if="showMiniNav" class="absolute left-0 top-[70%] w-full bg-white z-[-20] rounded-lg">
     <nav class="py-5">
-      <ul
-        class="list-none"
-        @click="startAnimation()"
-      >
+      <ul class="list-none" @click="startAnimation()">
         <li>
           <a
             class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"
@@ -165,6 +155,28 @@ const startAnimation = () => {
                 d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
               />
             </svg>
+            <span class="ml-2">Customers</span>
+          </a>
+        </li>
+        <li>
+          <a 
+            class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"
+            href="#socialMedia">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+              />
+            </svg>
+
             <span class="ml-2">Customers</span>
           </a>
         </li>
