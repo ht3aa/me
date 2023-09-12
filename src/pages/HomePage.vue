@@ -5,6 +5,7 @@ import MovingCard from "../components/cards/MovingCard.vue";
 import LazyImg from "../components/LazyImg.vue";
 import BarChart from "../components/charts/BarChart.vue";
 import Doaa from "../components/religion/Doaa.vue";
+import SocialMedia from "../components/lists/SocialMedia.vue";
 import { customerOpinions, projects } from "../utils/global";
 import { ref } from "vue";
 
@@ -253,4 +254,11 @@ const showLessOpinions = () => {
     </button>
     <button v-else @click="showLessOpinions">show Less</button>
   </div>
+
+  <section id="socialMedia" class="wrapper ">
+    <div class="text-center w-[300px] mx-auto my-[100px]">
+      <h3>I'm very active on Instgram and Linkedin.</h3>
+      <SocialMedia />
+    </div>
+  </section>
 </template>

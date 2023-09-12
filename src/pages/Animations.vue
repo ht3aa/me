@@ -1,6 +1,6 @@
 <script setup>
 import GridSection from "../components/GridSection.vue";
-import MacNav from "../components/navbars/MacNav.vue";
+import MacAnimList from "../components/lists/MacAnimList.vue";
 import RandomText from "../components/texts/RandomText.vue";
 import v1Hamburger from "../components/hamburger/v1Hamburger.vue";
 import V2 from "../components/hamburger/V2.vue";

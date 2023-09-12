@@ -1,5 +1,5 @@
 <script setup>
-import MacNav from "./components/navbars/MacNav.vue";
+import NavBar from "./components/lists/NavBar.vue";
 import v1Hamburger from "./components/hamburger/v1Hamburger.vue";
 </script>
 
@@ -20,7 +20,7 @@ import v1Hamburger from "./components/hamburger/v1Hamburger.vue";
       </div>
     </div>
     <div class="w-1/2 hidden md:block">
-      <MacNav />
+      <NavBar />
     </div>
 
     <a
