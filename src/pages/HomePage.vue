@@ -5,72 +5,15 @@ import MovingCard from "../components/cards/MovingCard.vue";
 import LazyImg from "../components/LazyImg.vue";
 import BarChart from "../components/charts/BarChart.vue";
 import Doaa from "../components/religion/Doaa.vue";
+import { customerOpinions } from "../utils/global";
 import { ref } from "vue";
 
-// 21
-const customerOpinions = ref({
-  columns1: [
-    {
-      name: "سيف طالب",
-      opinion: "متواضع وشرح مفهوم عاشت ايدك",
-    },
-    { name: "ضحى صباح", opinion: "وردة" },
-    {
-      name: "حسين طلال",
-      opinion:
-        "مدرس ممتاز , شرح بسيط ومفهوم , دائماً يحب ينقل العلم للاخرين , يوصل المعلومة بطريقة بسيطة ومختصرة",
-    },
-    {
-      name: "يسر علي",
-      opinion: "انسان معطاء وطموح ومخلص بالشرح اتمنى له التوفيق",
-    },
-
-    { name: "عبد الكريم وسام", opinion: "جيد" },
-
-    { name: "ليث ابراهيم", opinion: "جيد" },
-  ],
-  columns2: [
-    { name: "محمد صفاء", opinion: "جيد جداً " },
-
-    {
-      name: "أنس اسكندر",
-      opinion:
-        "شخص مثابر ويحاول من تطوير نفسه ويحب مساعدة الآخرين بما يملك من علم..",
-    },
-
-    { name: "فرقان فيصل", opinion: "محاضرة ممتازة" },
-
-    {
-      name: "ايه مؤيد",
-      opinion: "اي صراحه كولش  استفاديت حلو طريقه شرح و نصيحه نتعلم منها",
-    },
-
-    { name: "مرتضى جمال", opinion: "رجل ممتاز" },
-
-    { name: "إسراء رشيد", opinion: "مساند" },
-  ],
-
-  columns3: [
-    { name: "سيف علي", opinion: "جيد" },
-    {
-      name: "نهاية رجا",
-      opinion: "بارك الله فيك وجعلها في ميزان حسناتك يارب العالمين ",
-    },
-    { name: "مرتضى جمال", opinion: "شخص خرافي " },
-
-    { name: "حسين منذر", opinion: "يقوم بتبسيط الفكرة بصورة واضحة جداً" },
-
-    { name: "ملاك حسن", opinion: "جيد جداً" },
-
-    { name: "مريم العذراء رافد", opinion: "ممتاز من ناحية الشرح" },
-  ],
-});
 
 const nOpinionToShow = ref(5);
 const increment = ref(0);
 const showMoreOpinions = () => {
   increment.value =
-    customerOpinions.value.columns3.length - nOpinionToShow.value;
+    customerOpinions.columns3.length - nOpinionToShow.value;
 
   if (increment.value >= 5) {
     increment.value = 5;
