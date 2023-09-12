@@ -159,11 +159,6 @@ const showLessOpinions = () => {
     <RotateCard>
       <a href="#hero">
         <div class="flex h-full">
-          <!-- <img
-            class="md:w-1/3 w-[30%] object-cover aspect-[0.7]"
-            src="/imgs/me.png"
-            alt="portfolio"
-          > -->
           <LazyImg
             extra-div-classes="md:w-1/3 w-[30%]"
             extra-img-classes="object-cover h-full aspect-[0.6]"
@@ -346,16 +341,6 @@ const showLessOpinions = () => {
               <li>
                 I am a reliable and trustworthy developer who will always meet
                 your deadlines.
-              </li>
-            </ul>
-            <li class="font-bold">Business Consultant</li>
-            <ul class="pl-5 pr-0 md:px-7 mb-5">
-              <li>
-                I can help you to improve your business by providing advice on
-                website design, development, and marketing.
-              </li>
-              <li>
-                I am a trusted advisor who will always put your business first.
               </li>
             </ul>
             <li class="font-bold">Web Developement Training</li>
