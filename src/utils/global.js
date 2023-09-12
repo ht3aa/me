@@ -57,17 +57,27 @@ export const customerOpinions = {
 
 export const projects = [
   {
-    id: 1,
+    id: 7,
+    href: "https://github.com/ht3aa/store",
+    blurredImg: "/imgs/store_small.jpg",
+    mainImg: "/imgs/store.png",
+    imgAlt: "Store",
+    title: "Store",
+    description:
+      "Ecommerce website that contains information about products and their prices. It have an admin dashboard and have CRUD fanctionality for Category, Users, Products and Bag sections.",
+  },
+  {
+    id: 6,
     href: "#hero",
     blurredImg: "/imgs/me-small.png",
     mainImg: "/imgs/me.png",
-    imgAlt: "portfolio",
+    imgAlt: "Portfolio",
     title: "Portfolio",
     description:
       "Contains information about me, big projects that I has done, and what I offer to you as a friend first and customer second.",
   },
   {
-    id: 2,
+    id: 5,
     href: " https://matlab-bag.vercel.app/ ",
     blurredImg: "/imgs/ali_falih-small.png",
     mainImg: "/imgs/ali_falih.png",
@@ -77,7 +87,7 @@ export const projects = [
       "A website that contains files and videos which explain Matlab software easily and simply. Tools that I used: Nuxt.js React framework and Vercel For hosting",
   },
   {
-    id: 3,
+    id: 4,
     href: "https://excel-bag.vercel.app/",
     blurredImg: "/imgs/mohammed_salman-small.jpg",
     mainImg: "/imgs/mohammed_salman.jpg",
@@ -88,7 +98,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 3,
     href: "https://github.com/ht3aa/english_bag",
     blurredImg: "/imgs/computer_teqniques_logo-small.png",
     mainImg: "/imgs/computer_teqniques_logo.png",
@@ -98,7 +108,7 @@ export const projects = [
       "A project that contains files and videos which explain English language easily and simply. features: Downloadable lecture files, voice records. You can read the lecture while listening the voice record or the videos responsive.",
   },
   {
-    id: 5,
+    id: 2,
     href: "https://github.com/ht3aa/covid19",
     blurredImg: "/imgs/covid19-small.png",
     mainImg: "/imgs/covid19.png",
@@ -108,7 +118,7 @@ export const projects = [
       "A project that contains a description about covid-19. also it contains the feature of finding the nearest vaccine from you.",
   },
   {
-    id: 6,
+    id: 1,
     href: "https://github.com/ht3aa/student_reg_system/tree/main",
     blurredImg: "/imgs/crud-small.png",
     mainImg: "/imgs/crud.png",
