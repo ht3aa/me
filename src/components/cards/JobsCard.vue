@@ -16,7 +16,7 @@ defineProps({
     />
     <h2 class="text-3xl md:text-4xl textMainColor">{{ job.companyName }}</h2>
     <p class="my-3">
-      I worked thier as <strong>"{{ job.position }}"</strong
+      I worked their as <strong>"{{ job.position }}"</strong
       >.
     </p>
     <em class="my-3"><small>{{ job.from }} - {{ job.to }}</small></em>
