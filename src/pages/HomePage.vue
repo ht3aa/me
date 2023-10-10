@@ -3,10 +3,11 @@ import RandomText from "../components/texts/RandomText.vue";
 import RotateCard from "../components/cards/RotateCard.vue";
 import MovingCard from "../components/cards/MovingCard.vue";
 import LazyImg from "../components/LazyImg.vue";
+import JobsCard from "../components/cards/JobsCard.vue";
 import BarChart from "../components/charts/BarChart.vue";
 import Doaa from "../components/religion/Doaa.vue";
 import SocialMedia from "../components/lists/SocialMedia.vue";
-import { customerOpinions, projects } from "../utils/global";
+import { customerOpinions, projects, jobs } from "../utils/global";
 import { ref } from "vue";
 
 
@@ -62,6 +63,19 @@ const showLessOpinions = () => {
     />
   </section>
   <Doaa />
+
+  <section
+    id="jobs"
+    class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 my-[100px]"
+  >
+    <JobsCard 
+      v-for="job in jobs" 
+      :key="job.id" 
+      :job="job"
+
+    />
+  </section>
+
   <section id="aboutMe" class="bgMainColor my-24">
     <div
       class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper"
@@ -98,7 +112,7 @@ const showLessOpinions = () => {
 
   <section
     id="projects"
-    class="wrapper grid gap-10 grid-cols-1 md:grid-cols-2 my-5"
+    class="wrapper grid gap-10 grid-cols-1 md:grid-cols-2"
   >
     <RotateCard v-for="project in projects" :key="project.id">
       <a :href="project.href">

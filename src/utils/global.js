@@ -128,3 +128,30 @@ export const projects = [
       "An integrated performance and quality students management system for Imam Al-Kadhim College, Dhi Qar departments. Features: CRUD functionality, Responsibility system, Access system, Simple Design",
   },
 ];
+
+
+
+
+
+export const jobs = [
+  {
+    id: 1,
+    blurredImg: "/imgs/ai_dojo_small.png",
+    mainImg: "/imgs/ai_dojo.png",
+    alt: "Ai dojo",
+    position: "Assistant Trainer For AI For Web Developer Bootcamp",
+    companyName: "Ai dojo",
+    from: "May 2023",
+    to: "Jul 2023",
+  },
+];
+
+
+
+
+
+
+
+
+
+
