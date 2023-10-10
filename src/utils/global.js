@@ -138,7 +138,7 @@ export const jobs = [
     id: 1,
     blurredImg: "/imgs/ai_dojo_small.png",
     mainImg: "/imgs/ai_dojo.png",
-    alt: "Ai dojo",
+    alt: "AI Dojo",
     position: "Assistant Trainer For AI For Web Developer Bootcamp",
     companyName: "Ai dojo",
     from: "May 2023",
