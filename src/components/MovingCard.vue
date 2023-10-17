@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import Container from "../Container.vue";
 
 // defineProps({
 //   src: String,

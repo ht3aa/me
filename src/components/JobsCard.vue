@@ -1,5 +1,5 @@
 <script setup>
-import LazyImg from "../LazyImg.vue";
+import LazyImg from "./LazyImg.vue";
 
 defineProps({
   job: Object

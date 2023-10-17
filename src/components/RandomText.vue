@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import anime from "animejs/lib/anime.es.js";
-import Container from "../Container.vue";
 
 const text = ref(null);
 

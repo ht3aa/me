@@ -1,6 +1,6 @@
 <script setup>
-import NavBar from "./components/lists/NavBar.vue";
-import v1Hamburger from "./components/hamburger/v1Hamburger.vue";
+import NavBar from "./components/NavBar.vue";
+import v1Hamburger from "./components/v1Hamburger.vue";
 </script>
 
 <template>

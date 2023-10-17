@@ -1,12 +1,12 @@
 <script setup>
-import RandomText from "../components/texts/RandomText.vue";
-import RotateCard from "../components/cards/RotateCard.vue";
-import MovingCard from "../components/cards/MovingCard.vue";
+import RandomText from "../components/RandomText.vue";
+import RotateCard from "../components/RotateCard.vue";
+import MovingCard from "../components/MovingCard.vue";
 import LazyImg from "../components/LazyImg.vue";
-import JobsCard from "../components/cards/JobsCard.vue";
-import BarChart from "../components/charts/BarChart.vue";
-import Doaa from "../components/religion/Doaa.vue";
-import SocialMedia from "../components/lists/SocialMedia.vue";
+import JobsCard from "../components/JobsCard.vue";
+import BarChart from "../components/BarChart.vue";
+import Doaa from "../components/Doaa.vue";
+import SocialMedia from "../components/SocialMedia.vue";
 import { customerOpinions, projects, jobs } from "../utils/global";
 import { ref } from "vue";
 
