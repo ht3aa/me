@@ -57,6 +57,16 @@ export const customerOpinions = {
 
 export const projects = [
   {
+    id: 8,
+    href: "https://www.kingcity.store/",
+    blurredImg: "/imgs/kingcity-small.png",
+    mainImg: "/imgs/kingcity.png",
+    imgAlt: "King City",
+    title: "King City",
+    description:
+      "Small Website for blad-almalk company (king city) to show the world who are they, what they offer, and how to contact them.",
+  },
+  {
     id: 7,
     href: "https://github.com/ht3aa/store",
     blurredImg: "/imgs/store_small.jpg",

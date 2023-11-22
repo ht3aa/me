@@ -1,3 +1,11 @@
 mohammed says:
 الغيمة دتشتت انتباهي
 solution 1: make on\off for the Cloud element  
+
+
+for making small size images:
+https://www.youtube.com/watch?v=hJ7Rg1821Q0
+
+
+command:
+ffmpeg -i imageName.jpg -vf scale=20:-1 imageName-small.jpg

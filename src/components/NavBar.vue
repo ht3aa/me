@@ -187,7 +187,9 @@ li svg {
   height: 30px;
 }
 
-li:hover {
+
+li:hover, li:focus {
   cursor: pointer;
+  color: #228be6;
 }
 </style>
