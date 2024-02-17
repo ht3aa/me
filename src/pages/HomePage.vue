@@ -7,7 +7,7 @@ import JobsCard from "../components/JobsCard.vue";
 import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
-import { customerOpinions, projects, jobs } from "../utils/global";
+import { customerOpinions, projects, jobs, certificates } from "../utils/global";
 import { ref } from "vue";
 
 const nOpinionToShow = ref(5);
@@ -107,7 +107,7 @@ const showLessOpinions = () => {
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" />
             <h3 class="text-2xl">{{ project.title }}</h3>
-            <p class="text-md ">{{ project.description }}</p>
+            <p class="text-md">{{ project.description }}</p>
             <em class="font-bold mt-3">click on me to see more.</em>
           </div>
         </div>
@@ -233,6 +233,14 @@ const showLessOpinions = () => {
     </button>
     <button v-else @click="showLessOpinions">show Less</button>
   </div>
+
+  <section id="certificates" class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-[100px]">
+    <div v-for="certificate in certificates" :key="certificate.id">
+      <RotateCard>
+        <img class="w-full object-cover aspect-[1.1]" :src="certificate.src" alt="certificate" />
+      </RotateCard>
+    </div>
+  </section>
 
   <section id="socialMedia" class="wrapper">
     <div class="text-center w-[300px] mx-auto my-[100px]">

@@ -157,3 +157,62 @@ export const jobs = [
 ];
 
 
+
+export const certificates = [
+  {
+    id: 1,
+    src: "/imgs/certificates/10.jpeg"
+  },
+  {
+    id: 2,
+    src: "/imgs/certificates/14.jpeg"
+  },
+  {
+    id: 3,
+    src: "/imgs/certificates/13.webp"
+  },
+  {
+    id: 4,
+    src: "/imgs/certificates/11.jpeg"
+  },
+  {
+    id: 5,
+    src: "/imgs/certificates/12.jpeg"
+  },
+  {
+    id: 6,
+    src: "/imgs/certificates/1.jpg"
+  },
+  {
+    id: 7,
+    src: "/imgs/certificates/2.jpg"
+  },
+  {
+    id: 8,
+    src: "/imgs/certificates/3.jpg"
+  },
+  {
+    id: 9,
+    src: "/imgs/certificates/4.jpg"
+  },
+  {
+    id: 10,
+    src: "/imgs/certificates/5.jpg"
+  },
+  {
+    id: 11,
+    src: "/imgs/certificates/6.jpg"
+  },
+  {
+    id: 12,
+    src: "/imgs/certificates/7.jpg"
+  },
+  {
+    id: 13,
+    src: "/imgs/certificates/8.jpg"
+  },
+  {
+    id: 14,
+    src: "/imgs/certificates/9.jpg"
+  },
+]
