@@ -62,7 +62,7 @@ export const projects = [
     blurredImg: "/imgs/kingcity-small.png",
     mainImg: "/imgs/kingcity.png",
     imgAlt: "King City",
-    title: "beladalmalkgenerltradingco",
+    title: "belad almalk",
     description:
       "Small Website for blad-almalk company (beladalmalkgenerltradingco) to show the world who are they, what they offer, and how to contact them.",
   },

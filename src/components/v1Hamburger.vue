@@ -202,7 +202,7 @@ const startAnimation = () => {
               />
             </svg>
 
-            <span class="ml-2">Customers</span>
+            <span class="ml-2">Social Media</span>
           </a>
         </li>
       </ul>
