@@ -237,7 +237,7 @@ const showLessOpinions = () => {
   <section id="certificates" class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-[100px]">
     <div v-for="certificate in certificates" :key="certificate.id">
       <RotateCard>
-        <img class="w-full object-cover aspect-[1.1]" :src="certificate.src" alt="certificate" />
+        <img class="w-full object-cover aspect-[1.1] hover:scale-110 transition" :src="certificate.src" alt="certificate" />
       </RotateCard>
     </div>
   </section>
