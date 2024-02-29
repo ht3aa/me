@@ -57,6 +57,16 @@ export const customerOpinions = {
 
 export const projects = [
   {
+    id: 9,
+    href: "https://github.com/ht3aa/twanis",
+    blurredImg: "/imgs/twanis_small.png",
+    mainImg: "/imgs/twanis.png",
+    imgAlt: "Twanis",
+    title: "Twanis",
+    description:
+      "Hurryup hackthon project for prodcast videos and making rooms and share it with your friends. ",
+  },
+  {
     id: 8,
     href: "https://www.beladalmalkgenerltradingco.store/",
     blurredImg: "/imgs/kingcity-small.png",
