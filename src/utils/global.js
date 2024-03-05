@@ -245,4 +245,13 @@ export const gifts = [
     src: "/imgs/gifts/1.jpg",
 
   },
+  {
+    id: 2,
+    from: "Hadeel Haider",
+    contact: "#",
+    contactBy: "None",
+    blurredSrc: "/imgs/gifts/2_small.jpg",
+    src: "/imgs/gifts/2.jpg",
+
+  },
 ];
