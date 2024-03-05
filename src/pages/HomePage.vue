@@ -7,7 +7,7 @@ import JobsCard from "../components/JobsCard.vue";
 import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
-import { customerOpinions, projects, jobs, certificates } from "../utils/global";
+import { customerOpinions, projects, gifts, jobs, certificates } from "../utils/global";
 import { ref } from "vue";
 
 const nOpinionToShow = ref(5);
@@ -237,8 +237,36 @@ const showLessOpinions = () => {
   <section id="certificates" class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-[100px]">
     <div v-for="certificate in certificates" :key="certificate.id">
       <RotateCard>
-        <img class="w-full object-cover aspect-[1.1] hover:scale-110 transition" :src="certificate.src" alt="certificate" />
+        <LazyImg
+          extra-img-classes="w-full object-cover aspect-[1.1] hover:scale-110 transition"
+          extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+          :blurred-img-src="certificate.blurredSrc"
+          :main-img-src="certificate.src"
+          alt="certificate"
+        />
       </RotateCard>
+    </div>
+  </section>
+
+  <section id="gifts" class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-[100px]">
+    <div v-for="gift in gifts" :key="gift.id" class="borderMainColor">
+      <div>
+        <a :href="gift.src">
+          <LazyImg
+            extra-img-classes="w-full object-cover aspect-[1.1]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
+            :blurred-img-src="gift.blurredSrc"
+            :main-img-src="gift.src"
+            alt="certificate"
+          />
+        </a>
+      </div>
+      <div class="p-1">
+        <p class="font-bold">Gift from: {{ gift.from }}</p>
+        <p>
+          Contact: <a class="textMainColor" :href="gift.contact">{{ gift.contactBy }}</a>
+        </p>
+      </div>
     </div>
   </section>
 

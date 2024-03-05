@@ -149,10 +149,6 @@ export const projects = [
   },
 ];
 
-
-
-
-
 export const jobs = [
   {
     id: 1,
@@ -166,63 +162,87 @@ export const jobs = [
   },
 ];
 
-
-
 export const certificates = [
   {
     id: 1,
-    src: "/imgs/certificates/10.jpeg"
+    src: "/imgs/certificates/10.jpeg",
+    blurredSrc: "/imgs/certificates/10_small.jpeg",
   },
   {
     id: 2,
-    src: "/imgs/certificates/14.jpeg"
+    src: "/imgs/certificates/14.jpeg",
+    blurredSrc: "/imgs/certificates/14_small.jpeg",
   },
   {
     id: 3,
-    src: "/imgs/certificates/13.webp"
+    src: "/imgs/certificates/13.webp",
+    blurredSrc: "/imgs/certificates/13_small.webp",
   },
   {
     id: 4,
-    src: "/imgs/certificates/11.jpeg"
+    src: "/imgs/certificates/11.jpeg",
+    blurredSrc: "/imgs/certificates/11_small.jpeg",
   },
   {
     id: 5,
-    src: "/imgs/certificates/12.jpeg"
+    src: "/imgs/certificates/12.jpeg",
+    blurredSrc: "/imgs/certificates/12_small.jpeg",
   },
   {
     id: 6,
-    src: "/imgs/certificates/1.jpg"
+    src: "/imgs/certificates/1.jpg",
+    blurredSrc: "/imgs/certificates/1_small.jpg",
   },
   {
     id: 7,
-    src: "/imgs/certificates/2.jpg"
+    src: "/imgs/certificates/2.jpg",
+    blurredSrc: "/imgs/certificates/2_small.jpg",
   },
   {
     id: 8,
-    src: "/imgs/certificates/3.jpg"
+    src: "/imgs/certificates/3.jpg",
+    blurredSrc: "/imgs/certificates/3_small.jpg",
   },
   {
     id: 9,
-    src: "/imgs/certificates/4.jpg"
+    src: "/imgs/certificates/4.jpg",
+    blurredSrc: "/imgs/certificates/4_small.jpg",
   },
   {
     id: 10,
-    src: "/imgs/certificates/5.jpg"
+    src: "/imgs/certificates/5.jpg",
+    blurredSrc: "/imgs/certificates/5_small.jpg",
   },
   {
     id: 11,
-    src: "/imgs/certificates/6.jpg"
+    src: "/imgs/certificates/6.jpg",
+    blurredSrc: "/imgs/certificates/6_small.jpg",
   },
   {
     id: 12,
-    src: "/imgs/certificates/7.jpg"
+    src: "/imgs/certificates/7.jpg",
+    blurredSrc: "/imgs/certificates/7_small.jpg",
   },
   {
     id: 13,
-    src: "/imgs/certificates/8.jpg"
+    src: "/imgs/certificates/8.jpg",
+    blurredSrc: "/imgs/certificates/8_small.jpg",
   },
   {
     id: 14,
-    src: "/imgs/certificates/9.jpg"
+    src: "/imgs/certificates/9.jpg",
+    blurredSrc: "/imgs/certificates/9_small.jpg",
   },
-]
+];
+
+export const gifts = [
+  {
+    id: 1,
+    from: "AYAT NEAMAH JABER",
+    contact: "https://www.instagram.com/the.store.cloud?igsh=enR3bTJkN2xtY3g5",
+    contactBy: "Instagram",
+    blurredSrc: "/imgs/gifts/1_small.jpg",
+    src: "/imgs/gifts/1.jpg",
+
+  },
+];
