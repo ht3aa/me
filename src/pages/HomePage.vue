@@ -7,6 +7,7 @@ import JobsCard from "../components/JobsCard.vue";
 import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
+import GlyphButton from "../components/GlyphButton.vue";
 import { customerOpinions, projects, gifts, jobs, certificates } from "../utils/global";
 import { ref } from "vue";
 
@@ -39,10 +40,10 @@ const showLessOpinions = () => {
       </p>
       <div class="flex justify-between mx-auto lg:mx-0 sm:w-[320px]">
         <a href="mailto:t.d.cc.hassan@gmail.com">
-          <button class="px-3 md:px-[25px]">Contact Me</button>
+          <GlyphButton gbresh="#^$@23" classes="px-3 md:px-[25px]" text="Contact Me" />
         </a>
         <a href="/pdfs/cv.pdf">
-          <button class="shadowBtn">My Experience</button>
+          <GlyphButton gbresh="23%&*" classes="shadowBtn" text="My Experience" />
         </a>
       </div>
     </div>

@@ -11,14 +11,7 @@ import {
   LinearScale,
 } from "chart.js";
 
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale
-);
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
 const chartData = ref({
   labels: ["5", "4", "3"],
@@ -41,10 +34,7 @@ const chartOptions = ref({
 </script>
 
 <template>
-  <Bar
-    :data="chartData"
-    :options="chartOptions"
-  />
+  <Bar :data="chartData" :options="chartOptions" />
 </template>
 
 <style scoped></style>
