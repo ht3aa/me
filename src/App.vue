@@ -19,12 +19,12 @@ import v1Hamburger from "./components/v1Hamburger.vue";
         &lt;Hassan/Web&gt;
       </div>
     </div>
-    <div class="w-1/2 hidden md:block">
+    <div class="w-1/2 hidden lg:block">
       <NavBar />
     </div>
 
     <a
-      class="hidden md:inline"
+      class="hidden lg:inline"
       href="mailto:t.d.cc.hassan@gmail.com"
     >
       <button class="text-base">Contact Me</button>
