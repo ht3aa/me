@@ -243,6 +243,7 @@ export const gifts = [
     contactBy: "Instagram",
     blurredSrc: "/imgs/gifts/1_small.jpg",
     src: "/imgs/gifts/1.jpg",
+    date: "2024-03-04",
 
   },
   {
@@ -252,6 +253,6 @@ export const gifts = [
     contactBy: "None",
     blurredSrc: "/imgs/gifts/2_small.jpg",
     src: "/imgs/gifts/2.jpg",
-
+    date: "2021",
   },
 ];

@@ -292,6 +292,7 @@ const showLessOpinions = () => {
         <p>
           Contact: <a class="textMainColor" :href="gift.contact">{{ gift.contactBy }}</a>
         </p>
+        <time class="text-gray-700">Date: {{ gift.date }}</time>
       </div>
     </div>
   </section>
