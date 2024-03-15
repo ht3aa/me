@@ -66,7 +66,7 @@ const showLessOpinions = () => {
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor">Recent Actions</h2>
   <section id="recentActions" class="pt-[50px] wrapper">
     <div class="flex flex-col lg:flex-row">
-      <div class="lg:w-[70%] text-center ml-5 lg:text-start pt-5 lg:pt-6 order-2">
+      <div class="lg:w-[70%] text-center ml-5 lg:text-start pt-5 lg:pt-1 order-2">
         <h3 class="text-2xl font-bold md:w-[95%]">
           Participation in the General Conference of the Association of Arab Universities
         </h3>
@@ -80,7 +80,7 @@ const showLessOpinions = () => {
 
       <LazyImg
         extra-div-classes="order-1 w-[100%] md:w-[350px] mx-auto lg:mx-0"
-        extra-img-classes="h-[220px] w-full object-cover"
+        extra-img-classes="h-[250px] w-full object-cover"
         extra-blurred-img-classes=""
         blurred-img-src="/imgs/recent_action_1-small.jpg"
         main-img-src="/imgs/recent_action_1.jpg"
