@@ -57,6 +57,16 @@ export const customerOpinions = {
 
 export const projects = [
   {
+    id: 10,
+    href: "https://github.com/ht3aa/neovimConfig",
+    blurredImg: "/imgs/productivity-small.png",
+    mainImg: "/imgs/productivity.png",
+    imgAlt: "productivity",
+    title: "Productivity Trackers",
+    description:
+      "If you are using lunarvim and tmux then this project for you. you can track your productivity and share it with your friends.",
+  },
+  {
     id: 9,
     href: "https://github.com/ht3aa/twanis",
     blurredImg: "/imgs/twanis_small.png",
@@ -244,7 +254,6 @@ export const gifts = [
     blurredSrc: "/imgs/gifts/1_small.jpg",
     src: "/imgs/gifts/1.jpg",
     date: "2024-03-04",
-
   },
   {
     id: 2,
