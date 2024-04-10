@@ -303,4 +303,10 @@ const showLessOpinions = () => {
       <SocialMedia />
     </div>
   </section>
+
+  <section id="copyright" class="wrapper mb-[50px]">
+
+    <div class="text-center">© 2024 Programmed By: <a class="textMainColor font-bold" href="https://github.com/ht3a">hasanweb</a> and Designed By: <a href="https://www.instagram.com/ali_tk99?igsh=aXF4bXZ2b3Q4bDJ3" class="textMainColor font-bold">Ali Talib</a></div>
+
+  </section>
 </template>
