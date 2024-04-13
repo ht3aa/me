@@ -76,7 +76,7 @@ const showLessOpinions = () => {
         :main-img-src="entity.src"
         alt="Entity logo"
       />
-      <p>{{ entity.name }}</p>
+      <p>{{ entity.name }}. <a :href="entity.activity" class="textMainColor">Activity</a></p>
     </div>
   </section>
 

@@ -272,18 +272,21 @@ export const cooperatedEntities = [
     name: "GDSC Aliraqia",
     blurredSrc: "/imgs/gdsc_aliraqia_small.jpeg",
     src: "/imgs/gdsc_aliraqia.jpeg",
+    activity: "https://www.instagram.com/p/CoSVGdmqJD_/?igsh=MTY1bTgwbHg4ZW5maQ=="
   },
   {
     id: 2,
     name: "GDSC Basra",
     blurredSrc: "/imgs/gdsc_basra_university_small.jpeg",
     src: "/imgs/gdsc_basra_university.jpeg",
+    activity: "https://www.instagram.com/p/C2nRbv-tSPZ/?igsh=MWR0bnNzNmVwdWhiaw=="
   },
   {
     id: 3,
     name: "Department Of Scientific Care",
     blurredSrc: "/imgs/department_of_scientific_care_small.jpeg",
     src: "/imgs/department_of_scientific_care.jpeg",
+    activity: "https://t.me/moys_swd/4563"
   },
 
   {
@@ -291,5 +294,6 @@ export const cooperatedEntities = [
     name: "Youth Support Program",
     blurredSrc: "/imgs/youth_support_program_small.jpeg",
     src: "/imgs/youth_support_program.jpeg",
+    activity: "https://www.instagram.com/p/CoNJD0_MPJV/?igsh=emtmNTh2Z2trbXpx"
   },
 ];
