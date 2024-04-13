@@ -272,7 +272,7 @@ export const cooperatedEntities = [
     name: "GDSC Aliraqia",
     blurredSrc: "/imgs/gdsc_aliraqia_small.jpeg",
     src: "/imgs/gdsc_aliraqia.jpeg",
-    activity: "https://www.instagram.com/p/CoSVGdmqJD_/?igsh=MTY1bTgwbHg4ZW5maQ=="
+    activity: "https://www.instagram.com/p/C5s0UOiKXFt/?igsh=MTIyYjc3ZWRhczZqMQ=="
   },
   {
     id: 2,
