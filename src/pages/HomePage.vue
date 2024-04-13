@@ -8,7 +8,7 @@ import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
 import GlyphButton from "../components/GlyphButton.vue";
-import { customerOpinions, projects, gifts, jobs, certificates } from "../utils/global";
+import { customerOpinions, cooperatedEntities, projects, gifts, jobs, certificates } from "../utils/global";
 import { ref } from "vue";
 
 const nOpinionToShow = ref(5);
@@ -61,6 +61,23 @@ const showLessOpinions = () => {
 
   <section id="jobs" class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 my-[100px]">
     <JobsCard v-for="job in jobs" :key="job.id" :job="job" />
+  </section>
+
+  <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor mt-[150px]">
+    Entities that cooperated with them
+  </h2>
+  <section id="cooperatedEntities" class="pt-[50px] wrapper flex flex-wrap justify-center mb-[200px] items-center">
+    <div v-for="entity in cooperatedEntities" :key="entity.id" class="text-center mb-5 mx-5 ">
+      <LazyImg
+        extra-div-classes="w-[150px] mb-2 mx-auto "
+        extra-img-classes="w-full rounded-full borderMainColor"
+        extra-blurred-img-classes=""
+        :blurred-img-src="entity.blurredSrc"
+        :main-img-src="entity.src"
+        alt="Entity logo"
+      />
+      <p>{{ entity.name }}</p>
+    </div>
   </section>
 
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor">Recent Actions</h2>
@@ -305,8 +322,15 @@ const showLessOpinions = () => {
   </section>
 
   <section id="copyright" class="wrapper mb-[50px]">
-
-    <div class="text-center">© 2024 Programmed By: <a class="textMainColor font-bold" href="https://github.com/ht3a">hasanweb</a> and Designed By: <a href="https://www.instagram.com/ali_tk99?igsh=aXF4bXZ2b3Q4bDJ3" class="textMainColor font-bold">Ali Talib</a></div>
-
+    <div class="text-center">
+      © 2024 Programmed By:
+      <a class="textMainColor font-bold" href="https://github.com/ht3a">hasanweb</a> and Designed
+      By:
+      <a
+        href="https://www.instagram.com/ali_tk99?igsh=aXF4bXZ2b3Q4bDJ3"
+        class="textMainColor font-bold"
+        >Ali Talib</a
+      >
+    </div>
   </section>
 </template>

@@ -265,3 +265,31 @@ export const gifts = [
     date: "2021",
   },
 ];
+
+export const cooperatedEntities = [
+  {
+    id: 1,
+    name: "GDSC Aliraqia",
+    blurredSrc: "/imgs/gdsc_aliraqia_small.jpeg",
+    src: "/imgs/gdsc_aliraqia.jpeg",
+  },
+  {
+    id: 2,
+    name: "GDSC Basra",
+    blurredSrc: "/imgs/gdsc_basra_university_small.jpeg",
+    src: "/imgs/gdsc_basra_university.jpeg",
+  },
+  {
+    id: 3,
+    name: "Department Of Scientific Care",
+    blurredSrc: "/imgs/department_of_scientific_care_small.jpeg",
+    src: "/imgs/department_of_scientific_care.jpeg",
+  },
+
+  {
+    id: 4,
+    name: "Youth Support Program",
+    blurredSrc: "/imgs/youth_support_program_small.jpeg",
+    src: "/imgs/youth_support_program.jpeg",
+  },
+];
