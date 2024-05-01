@@ -193,7 +193,7 @@ contributions: [
       {
         id: 2,
         name: "Ali Qassim",
-        role: "DataBase Manage",
+        role: "DataBase Manager",
         link: "https://github.com/AliQassim2",
         linkName: "Github",
       },
