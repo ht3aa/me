@@ -202,7 +202,7 @@ contributions: [
         name: "Yasser Albakri",
         role: "Team Leader",
         link: "https://www.linkedin.com/in/yasser-albakri-671769220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        linkName: "Github",
+        linkName: "Linkedin",
       },
     ],
   },
