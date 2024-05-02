@@ -170,7 +170,7 @@ export const jobs = [
     type: "Part Time",
     from: "May 2023",
     to: "Jul 2023",
-contributions: [],
+    contributions: [],
   },
   {
     id: 2,
@@ -182,7 +182,7 @@ contributions: [],
     companyName: "شركة الجدار الناري",
     from: "Apr 2024",
     to: "Apr 2024",
-contributions: [
+    contributions: [
       {
         id: 1,
         name: "Tariq Mohamed",
@@ -209,6 +209,11 @@ contributions: [
 ];
 
 export const certificates = [
+  {
+    id: 15,
+    src: "/imgs/certificates/15.jpg",
+    blurredSrc: "/imgs/certificates/15-small.jpg",
+  },
   {
     id: 1,
     src: "/imgs/certificates/10.jpeg",
@@ -317,21 +322,21 @@ export const cooperatedEntities = [
     name: "GDSC Aliraqia",
     blurredSrc: "/imgs/gdsc_aliraqia_small.jpeg",
     src: "/imgs/gdsc_aliraqia.jpeg",
-    activity: "https://www.instagram.com/p/C5s0UOiKXFt/?igsh=MTIyYjc3ZWRhczZqMQ=="
+    activity: "https://www.instagram.com/p/C5s0UOiKXFt/?igsh=MTIyYjc3ZWRhczZqMQ==",
   },
   {
     id: 2,
     name: "GDSC Basra",
     blurredSrc: "/imgs/gdsc_basra_university_small.jpeg",
     src: "/imgs/gdsc_basra_university.jpeg",
-    activity: "https://www.instagram.com/p/C2nRbv-tSPZ/?igsh=MWR0bnNzNmVwdWhiaw=="
+    activity: "https://www.instagram.com/p/C2nRbv-tSPZ/?igsh=MWR0bnNzNmVwdWhiaw==",
   },
   {
     id: 3,
     name: "Department Of Scientific Care",
     blurredSrc: "/imgs/department_of_scientific_care_small.jpeg",
     src: "/imgs/department_of_scientific_care.jpeg",
-    activity: "https://t.me/moys_swd/4563"
+    activity: "https://t.me/moys_swd/4563",
   },
 
   {
@@ -339,6 +344,28 @@ export const cooperatedEntities = [
     name: "Youth Support Program",
     blurredSrc: "/imgs/youth_support_program_small.jpeg",
     src: "/imgs/youth_support_program.jpeg",
-    activity: "https://www.instagram.com/p/CoNJD0_MPJV/?igsh=emtmNTh2Z2trbXpx"
+    activity: "https://www.instagram.com/p/CoNJD0_MPJV/?igsh=emtmNTh2Z2trbXpx",
+  },
+];
+
+export const recentActions = [
+  {
+    id: 2,
+    title: "Participation in the Festival of the Biomedical Engineering Department",
+    description: `I along with my colleagues (Rami Farqad and Raghad Mezher), were invited to participate in
+          the Festival of my department in order to presenting our graduation project.`,
+    date: "2024-04-29",
+    blurredSrc: "/imgs/department_festival-small.jpg",
+    src: "/imgs/department_festival.jpg",
+  },
+  {
+    id: 1,
+    title: "Participation in the General Conference of the Association of Arab Universities",
+    description: `I along with my colleagues (Rami Farqad and Raghad Mezher), were invited to participate in
+          the General Conference of the Association of Arab Universities in order to represent the
+          University of Technology in the conference by presenting our graduation project.`,
+    date: "2024-03-3",
+    blurredSrc: "/imgs/recent_action_1-small.jpg",
+    src: "/imgs/recent_action_1.jpg",
   },
 ];

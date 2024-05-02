@@ -8,7 +8,7 @@ import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
 import GlyphButton from "../components/GlyphButton.vue";
-import { customerOpinions, cooperatedEntities, projects, gifts, jobs, certificates } from "../utils/global";
+import { customerOpinions, recentActions, cooperatedEntities, projects, gifts, jobs, certificates } from "../utils/global";
 import { ref } from "vue";
 
 const nOpinionToShow = ref(5);
@@ -82,25 +82,24 @@ const showLessOpinions = () => {
 
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor">Recent Actions</h2>
   <section id="recentActions" class="pt-[50px] wrapper">
-    <div class="flex flex-col lg:flex-row">
+    <div v-for="action in recentActions"  class="flex flex-col lg:flex-row mb-5">
       <div class="lg:w-[70%] text-center ml-5 lg:text-start pt-5 lg:pt-1 order-2">
         <h3 class="text-2xl font-bold md:w-[95%]">
-          Participation in the General Conference of the Association of Arab Universities
+
+          {{action.title}}
         </h3>
         <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
-          I along with my colleagues (Rami Farqad and Raghad Mezher), were invited to participate in
-          the General Conference of the Association of Arab Universities in order to represent the
-          University of Technology in the conference by presenting our graduation project.
+          {{action.description}}
         </p>
-        <time class="text-gray-500">2024-03-3</time>
+        <time class="text-gray-500">{{action.date}}</time>
       </div>
 
       <LazyImg
         extra-div-classes="order-1 w-[100%] md:w-[350px] mx-auto lg:mx-0"
         extra-img-classes="h-[250px] w-full object-cover"
         extra-blurred-img-classes=""
-        blurred-img-src="/imgs/recent_action_1-small.jpg"
-        main-img-src="/imgs/recent_action_1.jpg"
+        :blurred-img-src="action.blurredSrc"
+        :main-img-src="action.src"
         alt="recent action"
       />
     </div>
