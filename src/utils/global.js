@@ -300,6 +300,15 @@ export const gifts = [
     src: "/imgs/gifts/2.jpg",
     date: "2021",
   },
+  {
+    id: 3,
+    from: "Anonymous",
+    contact: "#",
+    contactBy: "None",
+    blurredSrc: "/imgs/gifts/department_pen-small.jpg",
+    src: "/imgs/gifts/department_pen.jpg",
+    date: "2024",
+  },
 ];
 
 export const cooperatedEntities = [
