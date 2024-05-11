@@ -1,18 +1,16 @@
 <script setup>
 import NavBar from "./components/NavBar.vue";
 import v1Hamburger from "./components/v1Hamburger.vue";
+import Banner from "./components/Banner.vue";
 </script>
 
 <template>
+  <Banner />
   <nav
-    class="wrapper bg-white py-2 top-2 left-0 right-0 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[999]"
+    class="wrapper bg-white py-2 top-3 left-0 right-0 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[80]"
   >
     <div class="relative navItem">
-      <img
-        class="w-[50px] rounded-full"
-        src="/imgs/logo.png"
-        alt="Logo"
-      >
+      <img class="w-[50px] rounded-full" src="/imgs/logo.png" alt="Logo" />
       <div
         class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
       >
@@ -23,10 +21,7 @@ import v1Hamburger from "./components/v1Hamburger.vue";
       <NavBar />
     </div>
 
-    <a
-      class="hidden lg:inline"
-      href="mailto:t.d.cc.hassan@gmail.com"
-    >
+    <a class="hidden lg:inline" href="mailto:t.d.cc.hassan@gmail.com">
       <button class="text-base">Contact Me</button>
     </a>
     <v1-hamburger />
@@ -37,9 +32,7 @@ import v1Hamburger from "./components/v1Hamburger.vue";
     />
   </div>
 
-  <div
-    class="w-full h-[1000px] absolute bottom-[-1200px] left-0 overflow-hidden z-10"
-  >
+  <div class="w-full h-[1000px] absolute bottom-[-1200px] left-0 overflow-hidden z-10">
     <div
       class="absolute bottom-[180px] left-[-60px] w-[100px] h-[500px] bgSecondaryColor rotate-[45deg] rounded-[150px]"
     />

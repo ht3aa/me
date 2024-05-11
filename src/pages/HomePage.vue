@@ -8,7 +8,15 @@ import BarChart from "../components/BarChart.vue";
 import Doaa from "../components/Doaa.vue";
 import SocialMedia from "../components/SocialMedia.vue";
 import GlyphButton from "../components/GlyphButton.vue";
-import { customerOpinions, recentActions, cooperatedEntities, projects, gifts, jobs, certificates } from "../utils/global";
+import {
+  customerOpinions,
+  recentActions,
+  cooperatedEntities,
+  projects,
+  gifts,
+  jobs,
+  certificates,
+} from "../utils/global";
 import { ref } from "vue";
 
 const nOpinionToShow = ref(5);
@@ -59,15 +67,21 @@ const showLessOpinions = () => {
   </section>
   <Doaa />
 
-  <section id="jobs" class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 my-[100px]">
+  <section
+    id="jobs"
+    class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 md:justify-items-center my-[100px]"
+  >
     <JobsCard v-for="job in jobs" :key="job.id" :job="job" />
   </section>
 
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor mt-[150px]">
     Entities that cooperated with them
   </h2>
-  <section id="cooperatedEntities" class="pt-[50px] wrapper flex flex-wrap justify-center mb-[200px] items-center">
-    <div v-for="entity in cooperatedEntities" :key="entity.id" class="text-center mb-5 mx-5 ">
+  <section
+    id="cooperatedEntities"
+    class="pt-[50px] wrapper flex flex-wrap justify-center mb-[200px] items-center"
+  >
+    <div v-for="entity in cooperatedEntities" :key="entity.id" class="text-center mb-5 mx-5">
       <LazyImg
         extra-div-classes="w-[150px] mb-2 mx-auto "
         extra-img-classes="w-full rounded-full borderMainColor"
@@ -82,16 +96,15 @@ const showLessOpinions = () => {
 
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor">Recent Actions</h2>
   <section id="recentActions" class="pt-[50px] wrapper">
-    <div v-for="action in recentActions"  class="flex flex-col lg:flex-row mb-5">
+    <div v-for="action in recentActions" class="flex flex-col lg:flex-row mb-5">
       <div class="lg:w-[70%] text-center ml-5 lg:text-start pt-5 lg:pt-1 order-2">
         <h3 class="text-2xl font-bold md:w-[95%]">
-
-          {{action.title}}
+          {{ action.title }}
         </h3>
         <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
-          {{action.description}}
+          {{ action.description }}
         </p>
-        <time class="text-gray-500">{{action.date}}</time>
+        <time class="text-gray-500">{{ action.date }}</time>
       </div>
 
       <LazyImg
