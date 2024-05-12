@@ -27,7 +27,7 @@ const startMoveState = (e) => {
 };
 
 const startLeaveState = () => {
-  card.value.style.boxShadow = `2px 2px 5px rgb(180, 180, 180)`;
+  card.value.style.boxShadow = `0 4px 6px -1px #b4b4b4`;
 };
 
 onMounted(() => {
@@ -44,7 +44,7 @@ onMounted(() => {
 <template>
   <div
     ref="card"
-    class="customShadow bg-[#ffffff99]"
+    class="shadow-md shadow-[#b4b4b4]  bg-[#ffffff99] dark:bg-[#282828] dark:shadow-[2px 2px 5px rgb(0, 0, 0)]"
     @mousemove="startMoveState"
     @mouseleave="startLeaveState"
   >

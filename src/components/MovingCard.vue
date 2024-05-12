@@ -36,11 +36,11 @@ onMounted(() => {
 <template>
   <div
     ref="container"
-    class="mx-auto my-28"
+    class="mx-auto my-28 "
   >
     <div
       ref="card"
-      class="move flex md:flex-row flex-col shadow-lg"
+      class="move flex md:flex-row flex-col shadow-lg dark:bg-[#282828]"
     >
       <slot />
     </div>

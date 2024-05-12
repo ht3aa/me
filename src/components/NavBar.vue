@@ -262,6 +262,7 @@ import MacAnimList from "./MacAnimList.vue";
         </div>
       </a>
     </li>
+
   </MacAnimList>
 </template>
 

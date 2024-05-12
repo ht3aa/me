@@ -37,7 +37,7 @@ const showLessOpinions = () => {
 </script>
 
 <template>
-  <section id="hero" class="flex flex-col lg:flex-row pt-[100px] wrapper">
+  <section id="hero" class="flex  flex-col lg:flex-row pt-[100px] wrapper">
     <div class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1">
       <h1 class="text-4xl lg:text-6xl font-bold">Turn your idea to <RandomText /></h1>
       <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
@@ -117,7 +117,7 @@ const showLessOpinions = () => {
       />
     </div>
   </section>
-  <section id="aboutMe" class="bgMainColor my-24">
+  <section id="aboutMe" class="bgMainColor dark:bg-[#228be633] my-24">
     <div class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper">
       <div
         class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1"
@@ -170,7 +170,7 @@ const showLessOpinions = () => {
     </RotateCard>
   </section>
 
-  <section id="features" class="wrapper flex">
+  <section id="features" class="wrapper flex ">
     <MovingCard>
       <LazyImg
         extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
@@ -326,7 +326,7 @@ const showLessOpinions = () => {
     </div>
   </section>
 
-  <section id="socialMedia" class="wrapper">
+  <section id="socialMedia" class="wrapper dark:fill-white">
     <div class="text-center w-[300px] mx-auto my-[100px]">
       <h3>I'm very active on Instgram and Linkedin.</h3>
       <SocialMedia />

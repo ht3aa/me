@@ -39,12 +39,14 @@ const startAnimation = () => {
 
 <template>
   <div ref="hamContainer" class="ham_1 flex lg:hidden" @click="startAnimation()">
-    <div class="mainBar">
+    <div class="mainBar bg-black dark:bg-white">
+      <div class="mainBar_upper bg-black dark:bg-white"></div>
       <div class="mainBar_firstHalf" />
       <div class="mainBar_secondHalf" />
+      <div class="mainBar_lower bg-black dark:bg-white"></div>
     </div>
   </div>
-  <div v-if="showMiniNav" class="absolute left-0 top-[70%] w-full bg-white z-[-20] rounded-lg">
+  <div v-if="showMiniNav" class="absolute left-0 top-[70%] w-full bg-white dark:bg-[#181818] dark:text-white z-[-20] rounded-lg">
     <nav class="py-5">
       <ul class="list-none" @click="startAnimation()">
         <li>
@@ -321,7 +323,6 @@ const startAnimation = () => {
   height: 3.7px;
   position: relative;
   display: flex;
-  background-color: black;
   justify-content: space-between;
 }
 
@@ -329,7 +330,6 @@ const startAnimation = () => {
 .mainBar_secondHalf {
   width: 50%;
   height: 100%;
-  background-color: #000000;
   transition: all 0.5s ease-in-out;
 }
 
@@ -337,44 +337,43 @@ const startAnimation = () => {
   direction: rtl;
 }
 
-.mainBar::before,
-.mainBar::after {
+.mainBar_lower,
+.mainBar_upper {
   content: "";
   width: 100%;
   height: 3.7px;
   left: 0;
   top: 0;
   position: absolute;
-  background-color: #000000;
   transition: all 0.5s ease-in-out;
 }
 
-.mainBar::before {
+.mainBar_lower {
   transform: translateY(-7px);
 }
-.mainBar::after {
+.mainBar_upper {
   transform: translateY(7px);
 }
 
 /* start animation classes */
 
-.ham_1.toBackward .mainBar::before,
-.ham_1.toBackward .mainBar::after {
+.ham_1.toBackward .mainBar_lower,
+.ham_1.toBackward .mainBar_upper {
   left: -85%;
 }
 
-.ham_1.rotateUp .mainBar::before {
+.ham_1.rotateUp .mainBar_lower {
   top: -15px;
   transform: rotate(45deg);
 }
 
-.ham_1.rotateDown .mainBar::after {
+.ham_1.rotateDown .mainBar_upper {
   top: 15px;
   transform: rotate(-45deg);
 }
 
-.ham_1.toForward .mainBar::before,
-.ham_1.toForward .mainBar::after {
+.ham_1.toForward .mainBar_lower,
+.ham_1.toForward .mainBar_upper {
   left: 0;
   top: 0;
 }
