@@ -6,26 +6,6 @@ import Banner from "./components/Banner.vue";
 
 <template>
   <Banner />
-  <nav
-    class="wrapper bg-white py-2 top-3 left-0 right-0 shadow-xl px-5 flex items-center justify-between rounded-xl fixed z-[80]"
-  >
-    <div class="relative navItem">
-      <img class="w-[50px] rounded-full" src="/imgs/logo.png" alt="Logo" />
-      <div
-        class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
-      >
-        &lt;Hassan/Web&gt;
-      </div>
-    </div>
-    <div class="w-1/2 hidden lg:block">
-      <NavBar />
-    </div>
-
-    <a class="hidden lg:inline" href="mailto:t.d.cc.hassan@gmail.com">
-      <button class="text-base">Contact Me</button>
-    </a>
-    <v1-hamburger />
-  </nav>
   <div class="w-full h-[500px] absolute overflow-hidden z-10">
     <div
       class="absolute right-[-150px] top-[-120px] w-[500px] h-[500px] bgSecondaryColor rounded-full"
@@ -45,6 +25,26 @@ import Banner from "./components/Banner.vue";
   </div>
 
   <div class="relative z-40">
+    <nav
+      class="wrapper bg-white py-2 shadow-xl px-5 flex items-center justify-between rounded-xl top-[10px] sticky z-[80]"
+    >
+      <div class="relative navItem">
+        <img class="w-[50px] rounded-full" src="/imgs/logo.png" alt="Logo" />
+        <div
+          class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
+        >
+          &lt;Hassan/Web&gt;
+        </div>
+      </div>
+      <div class="w-1/2 hidden lg:block">
+        <NavBar />
+      </div>
+
+      <a class="hidden lg:inline" href="mailto:t.d.cc.hassan@gmail.com">
+        <button class="text-base">Contact Me</button>
+      </a>
+      <v1-hamburger />
+    </nav>
     <router-view />
   </div>
 </template>
