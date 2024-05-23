@@ -314,6 +314,15 @@ export const gifts = [
     src: "/imgs/gifts/department_pen.jpg",
     date: "2024",
   },
+  {
+    id: 4,
+    from: "Jafar Ali",
+    contact: "https://www.instagram.com/jakm0?igsh=Y3d5bmw5a2hpNTRt",
+    contactBy: "Instagram",
+    blurredSrc: "/imgs/gifts/rgb_lights_small.jpg",
+    src: "/imgs/gifts/rgb_lights.jpg",
+    date: "2024-05-21",
+  },
 ];
 
 export const cooperatedEntities = [
@@ -349,6 +358,14 @@ export const cooperatedEntities = [
 ];
 
 export const recentActions = [
+  {
+    id: 3,
+    title: "Wahooo!! Graduation Day is Here.",
+description: "I am very happy to have graduated from the Department of Biomedical Engineering.",
+    date: "2024-05-23",
+    blurredSrc: "/imgs/graduation_title_small.jpg",
+    src: "/imgs/graduation_title.jpg",
+  },
   {
     id: 2,
     title: "Participation in the Festival of the Biomedical Engineering Department",

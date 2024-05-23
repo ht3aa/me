@@ -1,15 +1,15 @@
 <script setup>
 import {ref} from "vue"
 
-const state = ref("error")
+const state = ref("info")
 
 </script>
 
 
 <template>
 
-  <div class="py-1 text-center w-full text-white" :class="state === 'error' ? 'bg-red-700' : 'bg-green-700'">
-    <p>I'm currently busy with last finals for 5th year in my BME department at University of technology</p>
+  <div class="py-1 text-center w-full text-white" :class="state === 'error' ? 'bg-red-700' :  state === 'success' ?'bg-green-700' : 'bg-blue-700'">
+    <p>I'm currently offline. Taking some rest after my graduation.</p>
   </div>
 
 </template>
