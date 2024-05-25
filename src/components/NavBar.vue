@@ -10,7 +10,7 @@ const route = useRoute();
   <div class="flex">
     <ul class="flex relative">
       <span
-        class="font-bold bg-white dark:bg-[#181818] absolute left-1/2 translate-x-[-50%] bottom-0  py-1 px-4 rounded-3xl textMainColor shadow-xl"
+        class="font-bold bg-white dark:bg-[#181818] absolute left-1/2 translate-x-[-50%] bottom-0 py-1 px-4 rounded-3xl shadow-xl"
         :class="route.path === '/' ? 'translate-y-[70%]' : 'translate-y-[95%]'"
       >
         Pages
@@ -25,6 +25,7 @@ const route = useRoute();
             stroke-width="1.5"
             stroke="currentColor"
             class="w-6 h-6"
+            :class="route.path === '/' ? 'text-[#228be6]' : ''"
           >
             <path
               stroke-linecap="round"
@@ -48,6 +49,8 @@ const route = useRoute();
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
+            class="w-6 h-6"
+            :class="route.path === '/podcast' ? 'text-[#228be6]' : ''"
           >
             <path
               stroke-linecap="round"
@@ -72,7 +75,7 @@ const route = useRoute();
     </li>
     <div class="relative" v-if="route.path === '/'">
       <span
-        class="font-bold bg-white dark:bg-[#181818] absolute left-1/2 translate-x-[-50%] bottom-0 translate-y-[70%] py-1 px-4 rounded-3xl textMainColor shadow-xl"
+        class="font-bold bg-white dark:bg-[#181818] absolute left-1/2 translate-x-[-50%] bottom-0 translate-y-[70%] py-1 px-4 rounded-3xl shadow-xl"
       >
         Sections
       </span>
