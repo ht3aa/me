@@ -386,3 +386,13 @@ description: "I am very happy to have graduated from the Department of Biomedica
     src: "/imgs/recent_action_1.jpg",
   },
 ];
+
+export const hasanPodcast = [
+  {
+    id: 2,
+    number: 2,
+    title: "How to start with Web Programming",
+    audio: "/audios/episode3.mp3",
+    date: "2024-03-04",
+  }
+]

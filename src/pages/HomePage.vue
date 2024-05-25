@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import RandomText from "../components/RandomText.vue";
 import RotateCard from "../components/RotateCard.vue";
 import MovingCard from "../components/MovingCard.vue";
@@ -37,9 +38,12 @@ const showLessOpinions = () => {
 </script>
 
 <template>
-  <section id="hero" class="flex  flex-col lg:flex-row pt-[100px] wrapper">
+  <section id="hero" class="flex flex-col lg:flex-row pt-[100px] wrapper">
     <div class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1">
-      <h1 class="text-4xl lg:text-6xl font-bold">Turn your idea to <RandomText /></h1>
+      <RouterLink to="/podcast" class="font-bold text-[#228be6] underline"
+        ><em>Hasan Podcast is now available</em></RouterLink
+      >
+      <h1 class="text-4xl lg:text-6xl mt-5 font-bold">Turn your idea to <RandomText /></h1>
       <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
         Unlocking Digital Magic with Hassan Tahseen: Full-Stack Web Developer Extraordinaire!
         Harnessing the Power of Vue.js, Tailwind.css and nest.js, and More. Crafting Unique,
@@ -170,7 +174,7 @@ const showLessOpinions = () => {
     </RotateCard>
   </section>
 
-  <section id="features" class="wrapper flex ">
+  <section id="features" class="wrapper flex">
     <MovingCard>
       <LazyImg
         extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
@@ -321,7 +325,7 @@ const showLessOpinions = () => {
         <p>
           Contact: <a class="textMainColor" :href="gift.contact">{{ gift.contactBy }}</a>
         </p>
-        <time class="text-gray-700">Date: {{ gift.date }}</time>
+        <time class="text-gray-500">Date: {{ gift.date }}</time>
       </div>
     </div>
   </section>

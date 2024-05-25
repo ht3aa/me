@@ -1,11 +1,12 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import MacAnimList from "./MacAnimList.vue";
 </script>
 
 <template>
   <MacAnimList>
-    <li>
-      <a class="navItem relative" href="#hero">
+    <li >
+      <RouterLink class="navItem relative" to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -24,9 +25,37 @@ import MacAnimList from "./MacAnimList.vue";
         <div
           class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
         >
-          Home
+          Home Page
         </div>
-      </a>
+      </RouterLink>
+    </li>
+    <li>
+      <RouterLink class="navItem relative" to="/podcast">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
+          />
+        </svg>
+
+        <div
+          class="tooltip w-max absolute left-1/2 bottom-[-40px] translate-x-[-50%] bg-white textMainColor borderMainColor shadow-lg py-1 px-4"
+        >
+          Podcast Page
+        </div>
+      </RouterLink>
+    </li>
+    <li>
+      <div class="w-[2px] h-[30px] bgMainColor">
+        <div></div>
+      </div>
     </li>
     <li>
       <a class="navItem relative" href="#jobs">
@@ -262,15 +291,13 @@ import MacAnimList from "./MacAnimList.vue";
         </div>
       </a>
     </li>
-
   </MacAnimList>
 </template>
 
 <style scoped>
 li {
   border-radius: 10%;
-  margin: 0 10px;
-  /* background-color: #228be685; */
+  margin: 0 7px;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -282,7 +309,7 @@ li svg {
   height: 30px;
 }
 
-li:hover,
+li:not(li.bgMainColor):hover,
 li:focus {
   cursor: pointer;
   color: #228be6;

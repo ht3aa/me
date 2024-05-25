@@ -3,8 +3,10 @@ import NavBar from "./components/NavBar.vue";
 import v1Hamburger from "./components/v1Hamburger.vue";
 import Banner from "./components/Banner.vue";
 import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
 
 const darkMode = ref(false);
+const route = useRoute();
 
 function toggleDarkMode() {
   darkMode.value = !darkMode.value;
@@ -13,7 +15,7 @@ function toggleDarkMode() {
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
   } else {
-    console.log('hi')
+    console.log("hi");
     document.documentElement.classList.remove("dark");
     localStorage.setItem("theme", "light");
   }
@@ -33,7 +35,11 @@ onMounted(() => {
     />
   </div>
 
-  <div class="w-full h-[1000px] absolute bottom-[-1200px] left-0 overflow-hidden z-10">
+  <!-- TODO: v-if need to be deleted when you have so much podcasts -->
+  <div
+    v-if="route.path !== '/podcast'"
+    class="w-full h-[1000px] absolute bottom-[-1200px] left-0 overflow-hidden z-10"
+  >
     <div
       class="absolute bottom-[180px] left-[-60px] w-[100px] h-[500px] bgSecondaryColor rotate-[45deg] rounded-[150px]"
     />
@@ -57,7 +63,7 @@ onMounted(() => {
           &lt;Hassan/Web&gt;
         </div>
       </div>
-      <div class="w-1/2 hidden lg:block">
+      <div class="hidden lg:block">
         <NavBar />
       </div>
 

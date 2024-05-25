@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import { ref } from "vue";
 
 const showMiniNav = ref(false);
@@ -46,13 +47,16 @@ const startAnimation = () => {
       <div class="mainBar_lower bg-black dark:bg-white"></div>
     </div>
   </div>
-  <div v-if="showMiniNav" class="absolute left-0 top-[70%] w-full bg-white dark:bg-[#181818] dark:text-white z-[-20] rounded-lg">
+  <div
+    v-if="showMiniNav"
+    class="absolute left-0 top-[70%] w-full bg-white dark:bg-[#181818] dark:text-white z-[-20] rounded-lg"
+  >
     <nav class="py-5">
       <ul class="list-none" @click="startAnimation()">
         <li>
-          <a
+          <RouterLink
             class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"
-            href="#hero"
+            to="/"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,10 +73,33 @@ const startAnimation = () => {
               />
             </svg>
 
-            <span class="ml-2">Home</span>
-          </a>
+            <span class="ml-2">Home Page</span>
+          </RouterLink>
         </li>
 
+        <li>
+          <RouterLink
+            class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"
+            to="/podcast"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z"
+              />
+            </svg>
+
+            <span class="ml-2">Podcast Page</span>
+          </RouterLink>
+        </li>
         <li>
           <a
             class="flex items-center px-[20px] py-2 hover:bg-[#228be6] hover:text-white"
