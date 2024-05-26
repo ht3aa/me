@@ -56,7 +56,7 @@ const startAnimation = () => {
     class="absolute left-0 top-[70%] w-full bg-white dark:bg-[#181818] dark:text-white z-[-20] rounded-lg"
   >
 
-    <div v-if="showMiniNav" @click="startAnimation()" class="absolute left-[-180px] top-0 border-gray-600 h-[200vh] w-[200vw] z-[-10]"></div>
+    <div v-if="showMiniNav" @click="startAnimation()" class="absolute boxWidthHeight left-[-180px] top-0 border-gray-600 z-[-10]"></div>
     <nav
       class=" overflow-y-auto transition-all duration-500"
       :class="showMiniNav ? 'py-5 h-[450px]' : 'h-[0px] py-0 opacity-0'"
@@ -358,6 +358,10 @@ const startAnimation = () => {
 </template>
 
 <style scoped>
+.boxWidthHeight {
+  width : calc(100vw + 100px);
+  height : calc(100vh - 64px);
+}
 .ham_1 {
   width: 26px;
   height: 17px;
