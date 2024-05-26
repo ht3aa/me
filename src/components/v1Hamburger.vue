@@ -42,6 +42,7 @@ const startAnimation = () => {
 </script>
 
 <template>
+
   <div ref="hamContainer" class="ham_1 flex lg:hidden" @click="startAnimation()">
     <div class="mainBar bg-black dark:bg-white">
       <div class="mainBar_upper bg-black dark:bg-white"></div>
@@ -50,11 +51,16 @@ const startAnimation = () => {
       <div class="mainBar_lower bg-black dark:bg-white"></div>
     </div>
   </div>
+
   <div
-    v-if="showMiniNav"
     class="absolute left-0 top-[70%] w-full bg-white dark:bg-[#181818] dark:text-white z-[-20] rounded-lg"
   >
-    <nav class="py-5 overflow-y-auto h-[400px]">
+
+    <div v-if="showMiniNav" @click="startAnimation()" class="absolute left-[-180px] top-0 border-gray-600 h-[200vh] w-[200vw] z-[-10]"></div>
+    <nav
+      class=" overflow-y-auto transition-all duration-500"
+      :class="showMiniNav ? 'py-5 h-[450px]' : 'h-[0px] py-0 opacity-0'"
+    >
       <ul class="list-none" @click="startAnimation()">
         <div class="my-1 w-1/2 text-center mx-auto">
           <p class="borderMainColor">Pages</p>
