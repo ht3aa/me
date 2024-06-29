@@ -355,6 +355,13 @@ export const cooperatedEntities = [
     src: "/imgs/youth_support_program.jpeg",
     activity: "https://www.instagram.com/p/CoNJD0_MPJV/?igsh=emtmNTh2Z2trbXpx",
   },
+  {
+    id: 5,
+    name: "Iraqi Data",
+    blurredSrc: "/imgs/iraqi_data-small.png",
+    src: "/imgs/iraqi_data.png",
+    activity: "https://www.instagram.com/iraqidata?igsh=NXF4eGw5NHVsaDg3",
+  },
 ];
 
 export const recentActions = [
