@@ -29,6 +29,7 @@ const showMoreOpinions = () => {
     increment.value = 5;
   }
 
+
   nOpinionToShow.value += increment.value;
 };
 
@@ -40,10 +41,11 @@ const showLessOpinions = () => {
 <template>
   <section id="hero" class="flex flex-col lg:flex-row pt-[100px] wrapper">
     <div class="lg:w-[70%] text-center lg:text-start pt-10 lg:pt-20 order-2 lg:order-1">
-      <RouterLink to="/podcast" class="font-bold text-[#228be6] underline"
-        ><em>Hasan Podcast is now available</em></RouterLink
-      >
-      <h1 class="text-4xl lg:text-6xl mt-5 font-bold">Turn your idea to <RandomText /></h1>
+      <RouterLink to="/podcast" class="font-bold text-[#228be6] underline"><em>Hasan Podcast is now available</em>
+      </RouterLink>
+      <h1 class="text-4xl lg:text-6xl mt-5 font-bold">Turn your idea to
+        <RandomText />
+      </h1>
       <p class="mx-auto lg:mx-0 md:w-[70%] my-5">
         Unlocking Digital Magic with Hassan Tahseen: Full-Stack Web Developer Extraordinaire!
         Harnessing the Power of Vue.js, Tailwind.css and nest.js, and More. Crafting Unique,
@@ -60,40 +62,24 @@ const showLessOpinions = () => {
       </div>
     </div>
 
-    <LazyImg
-      extra-div-classes="order-1 w-[200px] lg:w-[300px] lg:order-2 mx-auto lg:mx-0"
-      extra-img-classes="rounded-full"
-      extra-blurred-img-classes="rounded-full"
-      blurred-img-src="/imgs/me-small.png"
-      main-img-src="/imgs/me.png"
-      alt="me and the boys"
-    />
+    <LazyImg extra-div-classes="order-1 w-[200px] lg:w-[300px] lg:order-2 mx-auto lg:mx-0"
+      extra-img-classes="rounded-full" extra-blurred-img-classes="rounded-full" blurred-img-src="/imgs/me-small.png"
+      main-img-src="/imgs/me.png" alt="me and the boys" />
   </section>
   <Doaa />
 
-  <section
-    id="jobs"
-    class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 md:justify-items-center my-[100px]"
-  >
+  <section id="jobs" class="wrapper grid gap-10 grid-cols-1 md:grid-cols-3 md:justify-items-center my-[100px]">
     <JobsCard v-for="job in jobs" :key="job.id" :job="job" />
   </section>
 
   <h2 class="text-3xl md:text-4xl text-center font-bold textMainColor mt-[150px]">
     Entities that cooperated with them
   </h2>
-  <section
-    id="cooperatedEntities"
-    class="pt-[50px] wrapper flex flex-wrap justify-center mb-[200px] items-center"
-  >
+  <section id="cooperatedEntities" class="pt-[50px] wrapper flex flex-wrap justify-center mb-[200px] items-center">
     <div v-for="entity in cooperatedEntities" :key="entity.id" class="text-center mb-5 mx-5">
-      <LazyImg
-        extra-div-classes="w-[150px] mb-2 mx-auto "
-        extra-img-classes="w-full rounded-full borderMainColor"
-        extra-blurred-img-classes=""
-        :blurred-img-src="entity.blurredSrc"
-        :main-img-src="entity.src"
-        alt="Entity logo"
-      />
+      <LazyImg extra-div-classes="w-[150px] mb-2 mx-auto " extra-img-classes="w-full rounded-full borderMainColor"
+        extra-blurred-img-classes="" :blurred-img-src="entity.blurredSrc" :main-img-src="entity.src"
+        alt="Entity logo" />
       <p>{{ entity.name }}. <a :href="entity.activity" class="textMainColor">Activity</a></p>
     </div>
   </section>
@@ -111,21 +97,14 @@ const showLessOpinions = () => {
         <time class="text-gray-500">{{ action.date }}</time>
       </div>
 
-      <LazyImg
-        extra-div-classes="order-1 w-[100%] md:w-[350px] mx-auto lg:mx-0"
-        extra-img-classes="h-[250px] w-full object-cover"
-        extra-blurred-img-classes=""
-        :blurred-img-src="action.blurredSrc"
-        :main-img-src="action.src"
-        alt="recent action"
-      />
+      <LazyImg extra-div-classes="order-1 w-[100%] md:w-[350px] mx-auto lg:mx-0"
+        extra-img-classes="h-[250px] w-full object-cover" extra-blurred-img-classes=""
+        :blurred-img-src="action.blurredSrc" :main-img-src="action.src" alt="recent action" />
     </div>
   </section>
   <section id="aboutMe" class="bgMainColor dark:bg-[#228be633] my-24">
     <div class="flex flex-col lg:flex-row items-center justify-between py-10 wrapper">
-      <div
-        class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1"
-      >
+      <div class="text-white w-[100%] md:w-[75%] text-center mt-5 lg:mt-0 lg:text-start lg:w-[50%] order-2 lg:order-1">
         <h2 class="text-3xl md:text-4xl">About me</h2>
         <p class="text-base md:text-lg my-5">
           I am Hassan Tahseen, a dedicated college student at the University of Technology in
@@ -141,13 +120,8 @@ const showLessOpinions = () => {
           <button class="bg-white textMainColor">Contact Me</button>
         </a>
       </div>
-      <LazyImg
-        extra-div-classes="order-1 lg:order-2"
-        extra-img-classes="w-[450px]"
-        blurred-img-src="/imgs/the_boys-small.jpg"
-        main-img-src="/imgs/the_boys.jpg"
-        alt="me and the boys"
-      />
+      <LazyImg extra-div-classes="order-1 lg:order-2" extra-img-classes="w-[450px]"
+        blurred-img-src="/imgs/the_boys-small.jpg" main-img-src="/imgs/the_boys.jpg" alt="me and the boys" />
     </div>
   </section>
 
@@ -155,14 +129,9 @@ const showLessOpinions = () => {
     <RotateCard v-for="project in projects" :key="project.id">
       <a :href="project.href">
         <div class="flex h-full">
-          <LazyImg
-            extra-div-classes="md:w-1/3 w-[30%]"
-            extra-img-classes="object-cover h-full"
-            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
-            :blurred-img-src="project.blurredImg"
-            :main-img-src="project.mainImg"
-            :alt="project.imgAlt"
-          />
+          <LazyImg extra-div-classes="md:w-1/3 w-[30%]" extra-img-classes="object-cover h-full"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]" :blurred-img-src="project.blurredImg"
+            :main-img-src="project.mainImg" :alt="project.imgAlt" />
           <div class="w-10/12 py-3 px-5 flex flex-col justify-center relative">
             <div class="w-[3px] h-[90%] bgMainColor absolute left-1 top-[50%] translate-y-[-50%]" />
             <h3 class="text-2xl">{{ project.title }}</h3>
@@ -176,14 +145,9 @@ const showLessOpinions = () => {
 
   <section id="features" class="wrapper flex">
     <MovingCard>
-      <LazyImg
-        extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]"
-        extra-img-classes="object-cover h-full"
-        extra-blurred-img-classes="object-cover h-full"
-        blurred-img-src="/imgs/me_with_green_8ames-small.jpg"
-        main-img-src="/imgs/me_with_green_8ames.jpg"
-        alt="Crud Design"
-      />
+      <LazyImg extra-div-classes="mx-auto md:mx-0 md:w-1/3 w-[200px]" extra-img-classes="object-cover h-full"
+        extra-blurred-img-classes="object-cover h-full" blurred-img-src="/imgs/me_with_green_8ames-small.jpg"
+        main-img-src="/imgs/me_with_green_8ames.jpg" alt="Crud Design" />
       <div class="w-full md:w-10/12 py-3 px-2 md:px-5 flex flex-col justify-between">
         <div>
           <h2 class="text-3xl md:text-4xl mt-2 md:mt-0 mb-5 text-center">What I Offer</h2>
@@ -230,14 +194,9 @@ const showLessOpinions = () => {
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <div>
-        <RotateCard
-          v-for="customer in customerOpinions.columns1.slice(0, nOpinionToShow)"
-          :key="customer.name"
-        >
+        <RotateCard v-for="customer in customerOpinions.columns1.slice(0, nOpinionToShow)" :key="customer.name">
           <div class="mb-5 py-3 px-5 direction-rtl relative">
-            <div
-              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-            />
+            <div class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]" />
             <h3 class="text-2xl mb-2">
               {{ customer.name }}
             </h3>
@@ -248,14 +207,9 @@ const showLessOpinions = () => {
         </RotateCard>
       </div>
       <div>
-        <RotateCard
-          v-for="customer in customerOpinions.columns2.slice(0, nOpinionToShow)"
-          :key="customer.name"
-        >
+        <RotateCard v-for="customer in customerOpinions.columns2.slice(0, nOpinionToShow)" :key="customer.name">
           <div class="mb-5 py-3 px-5 direction-rtl relative">
-            <div
-              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-            />
+            <div class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]" />
             <h3 class="text-2xl mb-2">
               {{ customer.name }}
             </h3>
@@ -266,14 +220,9 @@ const showLessOpinions = () => {
         </RotateCard>
       </div>
       <div>
-        <RotateCard
-          v-for="customer in customerOpinions.columns3.slice(0, nOpinionToShow)"
-          :key="customer.name"
-        >
+        <RotateCard v-for="customer in customerOpinions.columns3.slice(0, nOpinionToShow)" :key="customer.name">
           <div class="mb-5 py-3 px-5 direction-rtl relative">
-            <div
-              class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]"
-            />
+            <div class="w-[3px] h-[90%] bgMainColor absolute right-1 top-[50%] translate-y-[-50%]" />
             <h3 class="text-2xl mb-2">
               {{ customer.name }}
             </h3>
@@ -296,13 +245,9 @@ const showLessOpinions = () => {
   <section id="certificates" class="wrapper grid grid-cols-1 md:grid-cols-3 gap-5 mt-[100px]">
     <div v-for="certificate in certificates" :key="certificate.id">
       <RotateCard>
-        <LazyImg
-          extra-img-classes="w-full object-cover aspect-[1.1] hover:scale-110 transition"
-          extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
-          :blurred-img-src="certificate.blurredSrc"
-          :main-img-src="certificate.src"
-          alt="certificate"
-        />
+        <LazyImg extra-img-classes="w-full object-cover aspect-[1.1] hover:scale-110 transition"
+          extra-blurred-img-classes="object-cover h-full aspect-[0.6]" :blurred-img-src="certificate.blurredSrc"
+          :main-img-src="certificate.src" alt="certificate" />
       </RotateCard>
     </div>
   </section>
@@ -311,13 +256,9 @@ const showLessOpinions = () => {
     <div v-for="gift in gifts" :key="gift.id" class="borderMainColor">
       <div>
         <a :href="gift.src">
-          <LazyImg
-            extra-img-classes="w-full object-cover aspect-[1.1]"
-            extra-blurred-img-classes="object-cover h-full aspect-[0.6]"
-            :blurred-img-src="gift.blurredSrc"
-            :main-img-src="gift.src"
-            alt="certificate"
-          />
+          <LazyImg extra-img-classes="w-full object-cover aspect-[1.1]"
+            extra-blurred-img-classes="object-cover h-full aspect-[0.6]" :blurred-img-src="gift.blurredSrc"
+            :main-img-src="gift.src" alt="certificate" />
         </a>
       </div>
       <div class="p-1">
@@ -342,11 +283,7 @@ const showLessOpinions = () => {
       © 2024 Programmed By:
       <a class="textMainColor font-bold" href="https://github.com/ht3a">hasanweb</a> and Designed
       By:
-      <a
-        href="https://www.instagram.com/ali_tk99?igsh=aXF4bXZ2b3Q4bDJ3"
-        class="textMainColor font-bold"
-        >Ali Talib</a
-      >
+      <a href="https://www.instagram.com/ali_tk99?igsh=aXF4bXZ2b3Q4bDJ3" class="textMainColor font-bold">Ali Talib</a>
     </div>
   </section>
 </template>
