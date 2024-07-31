@@ -24,7 +24,8 @@ export const customerOpinions = {
 
     {
       name: "أنس اسكندر",
-      opinion: "شخص مثابر ويحاول من تطوير نفسه ويحب مساعدة الآخرين بما يملك من علم..",
+      opinion:
+        "شخص مثابر ويحاول من تطوير نفسه ويحب مساعدة الآخرين بما يملك من علم..",
     },
 
     { name: "فرقان فيصل", opinion: "محاضرة ممتازة" },
@@ -206,9 +207,31 @@ export const jobs = [
       },
     ],
   },
+  {
+    id: 1,
+    blurredImg: "/imgs/ta3leem-logo-small.png",
+    mainImg: "/imgs/ta3leem-logo.png",
+    alt: "Ta3leem",
+    position: "Junior Full Stack Developer using Laravel",
+    companyName: "Ta3leem",
+    type: "Full Time",
+    from: "Jul 2023",
+    to: "current",
+    contributions: [],
+  },
 ];
 
 export const certificates = [
+  {
+    id: 17,
+    src: "/imgs/certificates/gdg_basra_session.jpg",
+    blurredSrc: "/imgs/certificates/gdg_basra_session-small.jpg",
+  },
+  {
+    id: 16,
+    src: "/imgs/certificates/gdg_basra_course.jpg",
+    blurredSrc: "/imgs/certificates/gdg_basra_course-small.jpg",
+  },
   {
     id: 15,
     src: "/imgs/certificates/15.jpg",
@@ -331,14 +354,16 @@ export const cooperatedEntities = [
     name: "GDSC Aliraqia",
     blurredSrc: "/imgs/gdsc_aliraqia_small.jpeg",
     src: "/imgs/gdsc_aliraqia.jpeg",
-    activity: "https://www.instagram.com/p/C5s0UOiKXFt/?igsh=MTIyYjc3ZWRhczZqMQ==",
+    activity:
+      "https://www.instagram.com/p/C5s0UOiKXFt/?igsh=MTIyYjc3ZWRhczZqMQ==",
   },
   {
     id: 2,
     name: "GDSC Basra",
     blurredSrc: "/imgs/gdsc_basra_university_small.jpeg",
     src: "/imgs/gdsc_basra_university.jpeg",
-    activity: "https://www.instagram.com/p/C2nRbv-tSPZ/?igsh=MWR0bnNzNmVwdWhiaw==",
+    activity:
+      "https://www.instagram.com/p/C2nRbv-tSPZ/?igsh=MWR0bnNzNmVwdWhiaw==",
   },
   {
     id: 3,
@@ -368,14 +393,16 @@ export const recentActions = [
   {
     id: 3,
     title: "Wahooo!! Graduation Day is Here.",
-description: "I am very happy to have graduated from the Department of Biomedical Engineering.",
+    description:
+      "I am very happy to have graduated from the Department of Biomedical Engineering.",
     date: "2024-05-23",
     blurredSrc: "/imgs/graduation_title_small.jpg",
     src: "/imgs/graduation_title.jpg",
   },
   {
     id: 2,
-    title: "Participation in the Festival of the Biomedical Engineering Department",
+    title:
+      "Participation in the Festival of the Biomedical Engineering Department",
     description: `I along with my colleagues (Rami Farqad and Raghad Mezher), were invited to participate in
           the Festival of my department in order to presenting our graduation project.`,
     date: "2024-04-29",
@@ -384,7 +411,8 @@ description: "I am very happy to have graduated from the Department of Biomedica
   },
   {
     id: 1,
-    title: "Participation in the General Conference of the Association of Arab Universities",
+    title:
+      "Participation in the General Conference of the Association of Arab Universities",
     description: `I along with my colleagues (Rami Farqad and Raghad Mezher), were invited to participate in
           the General Conference of the Association of Arab Universities in order to represent the
           University of Technology in the conference by presenting our graduation project.`,
@@ -401,5 +429,5 @@ export const hasanPodcast = [
     title: "How to start with Web Programming",
     audio: "/audios/episode3.mp3",
     date: "2024-05-25",
-  }
-]
+  },
+];
